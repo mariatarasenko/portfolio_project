@@ -2,9 +2,10 @@ const gulp = require('gulp');
 const pug = require('gulp-pug');
 
 const sass = require('gulp-sass');
+const autoprefixer = require('gulp-autoprefixer');
 const rename = require('gulp-rename');
-const sourcemaps = require('gulp-sourcemaps');
-
+const sourceMap = require('gulp-sourcemaps');
+const groupCssMedia = require('gulp-group-css-media-queries');
 const del = require('del');
 
 const browserSync = require('browser-sync').create();
@@ -12,7 +13,10 @@ const browserSync = require('browser-sync').create();
 const gulpWebpack = require('gulp-webpack');
 const webpack = require('webpack');
 const webpackConfig = require('./webpack.config.js');
-
+const plumber = require('gulp-plumber');
+const sassGlob = require('gulp-sass-glob');
+const imagemin = require('gulp-imagemin');
+const svgSprite = require('gulp-svg-sprite');
 const paths = {
     root: './build',
     templates: {
@@ -30,27 +34,39 @@ const paths = {
     scripts: {
         src: 'src/scripts/**/*.js',
         dest: 'build/assets/scripts/'
+    },
+    svg: {
+        src: 'src/svg/**/*.svg',
+        dest: 'build/assets/images/svg/'
     }
 }
 
 // pug
 function templates() {
     return gulp.src(paths.templates.pages)
-        .pipe(pug({ pretty: true }))
-        .pipe(gulp.dest(paths.root));
+    .pipe(plumber())
+    .pipe(pug({pretty:true}))
+    .pipe(gulp.dest(paths.root));
 }
 
 // scss
-function styles() {
-    return gulp.src('./src/styles/app.scss')
-        .pipe(sourcemaps.init())
-        .pipe(sass({outputStyle: 'compressed'}))
-        .pipe(sourcemaps.write())
+function styles()  {
+    return gulp.src('./src/styles/main.scss')
+        .pipe(plumber())
+        .pipe(sourceMap.init())
+        .pipe(sassGlob())
+        .pipe(sass({outputStyle: 'expanded'}))
+        .pipe(groupCssMedia())
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
+        .pipe(sourceMap.write())
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest(paths.styles.dest))
 }
 
-// очистка
+//clean
 function clean() {
     return del(paths.root);
 }
@@ -58,11 +74,12 @@ function clean() {
 // webpack
 function scripts() {
     return gulp.src('src/scripts/app.js')
+        .pipe(plumber())
         .pipe(gulpWebpack(webpackConfig, webpack)) 
         .pipe(gulp.dest(paths.scripts.dest));
 }
 
-// галповский вотчер
+//watcher
 function watch() {
     gulp.watch(paths.styles.src, styles);
     gulp.watch(paths.templates.src, templates);
@@ -70,7 +87,7 @@ function watch() {
     gulp.watch(paths.scripts.src, scripts);
 }
 
-// локальный сервер + livereload (встроенный)
+// browserSync
 function server() {
     browserSync.init({
         server: paths.root
@@ -81,16 +98,39 @@ function server() {
 // просто переносим картинки
 function images() {
     return gulp.src(paths.images.src)
+        .pipe(imagemin())
         .pipe(gulp.dest(paths.images.dest));
-}
+         }
+const svgConfig					= {
+            shape				: {
+                dimension		: {		
+                    maxWidth	: 32,
+                    maxHeight	: 32
+                },
+                spacing			: {			
+                    padding		: 10
+                }
+            }
+        };
+        
+        function svg(){
+            return gulp.src(paths.svg.src)
+                .pipe(svgSprite(svgConfig))
+        }  
+
 
 exports.templates = templates;
 exports.styles = styles;
 exports.clean = clean;
+exports.watch = watch;
+exports.server = server;
 exports.images = images;
+exports.scripts = scripts;
+exports.svg = svg;
 
-gulp.task('default', gulp.series(
+
+gulp.task('default',gulp.series(
     clean,
     gulp.parallel(styles, templates, images, scripts),
-    gulp.parallel(watch, server)
+    gulp.parallel(watch,server)
 ));
