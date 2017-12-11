@@ -1,6 +1,8 @@
 const webpack = require('webpack');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
-
+const path = require('path');
+const linting = require('./webpack/linting');
+const babel = require('./webpack/babel');
 
 const config = {
     output: {
@@ -10,7 +12,9 @@ const config = {
         new UglifyJSPlugin({
             sourceMap: true
         })
+      
     ],
+
     module:{
         loaders: [{
             test: /\.js$/,
@@ -18,11 +22,8 @@ const config = {
             use: [
                 "babel-loader",
                 "eslint-loader",
-              ],
-              options: {
-               
-                formatter: require("eslint-friendly-formatter")
-              }
+              ]
+          
         }]
     }
 };

@@ -1,3 +1,4 @@
-console.log('Hello!!!');
 
-const bbb = 1+ 1;
+const ect = 1;
+
+document.write(ect);
