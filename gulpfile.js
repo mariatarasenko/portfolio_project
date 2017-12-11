@@ -31,15 +31,19 @@ const paths = {
         src: 'src/images/**/*.*',
         dest: 'build/assets/images/'
     },
+    fonts: {
+        src: 'src/fonts/**/*.*',
+        dest: 'build/assets/fonts/'
+    },
     scripts: {
         src: 'src/scripts/**/*.js',
         dest: 'build/assets/scripts/'
     },
     svg: {
-        src: 'src/svg/**/*.svg',
-        dest: 'build/assets/images/svg/'
+        src: 'src/svg/*.svg',
+        dest: 'build/assets/svg/'
     }
-}
+};
 
 // pug
 function templates() {
@@ -84,6 +88,7 @@ function watch() {
     gulp.watch(paths.styles.src, styles);
     gulp.watch(paths.templates.src, templates);
     gulp.watch(paths.images.src, images);
+    gulp.watch(paths.fonts.src, fonts);
     gulp.watch(paths.scripts.src, scripts);
 }
 
@@ -95,12 +100,21 @@ function server() {
     browserSync.watch(paths.root + '/**/*.*', browserSync.reload);
 }
 
-// просто переносим картинки
+// images
 function images() {
     return gulp.src(paths.images.src)
         .pipe(imagemin())
         .pipe(gulp.dest(paths.images.dest));
          }
+
+//fonts
+function fonts() {
+    return gulp.src(paths.fonts.src)
+        .pipe(gulp.dest(paths.fonts.dest));
+         }
+
+
+ //svg        
 const svgConfig					= {
             shape				: {
                 dimension		: {		
@@ -113,10 +127,12 @@ const svgConfig					= {
             }
         };
         
-        function svg(){
+function svg() {
             return gulp.src(paths.svg.src)
                 .pipe(svgSprite(svgConfig))
-        }  
+                .pipe(gulp.dest(paths.svg.dest));
+            }
+          
 
 
 exports.templates = templates;
@@ -127,10 +143,11 @@ exports.server = server;
 exports.images = images;
 exports.scripts = scripts;
 exports.svg = svg;
+exports.fonts = fonts;
 
 
 gulp.task('default',gulp.series(
     clean,
-    gulp.parallel(styles, templates, images, scripts),
+    gulp.parallel(styles, templates, images, scripts, fonts,svg),
     gulp.parallel(watch,server)
 ));
