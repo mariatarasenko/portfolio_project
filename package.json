@@ -4,7 +4,10 @@
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "eslint": "eslint --format node_modules/eslint-friendly-formatter file1 file2 dir1/ dir2/"
+
+    
   },
   "keywords": [],
   "author": "",
@@ -15,6 +18,8 @@
     "babel-loader": "^7.1.2",
     "browser-sync": "^2.18.13",
     "del": "^3.0.0",
+    "eslint": "^4.13.0",
+    "eslint-friendly-formatter": "^3.0.0",
     "eslint-loader": "^1.9.0",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-autoprefixer": "^4.0.0",
