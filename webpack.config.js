@@ -1,8 +1,7 @@
 const webpack = require('webpack');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const path = require('path');
-const linting = require('./webpack/linting');
-const babel = require('./webpack/babel');
+
 
 const config = {
     output: {

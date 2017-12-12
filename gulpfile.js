@@ -108,29 +108,24 @@ function fonts() {
 }
  //svg                
 function svg() {
-        return gulp.src(paths.svg.src)
+        return gulp.src(paths.images.src + 'icons/*.svg')
         // remove all fill, style and stroke declarations in out shapes
 		.pipe(gulpCheerio({
 			run: function ($) {
 				$('[fill]').removeAttr('fill');
-				$('[stroke]').removeAttr('stroke');
-				$('[style]').removeAttr('style');
             },
             parserOptions: {xmlMode: true}
 		}))
 		// cheerio plugin create unnecessary string '&gt;', so replace it.
-		.pipe(gulpReplace('&gt;', '>'))
+		// .pipe(gulpReplace('&gt;', '>'))
             // build svg sprite
         .pipe(svgSprite({
 				mode: "symbols",
-				preview: false,
-				selector: "icon-%f",
-				svg: {
-					symbols: './build/sprite.html'
-				}
+				preview: false
+				
 			}
 		))
-        .pipe(gulp.dest(paths.svg.dest));
+        .pipe(gulp.dest(paths.images.dest));
 }
               
 exports.templates = templates;
