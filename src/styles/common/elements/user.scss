@@ -1,0 +1,33 @@
+.user{
+display:flex;
+flex-direction: column;
+justify-content: center;
+text-align: center;
+align-items: center;
+
+}
+
+.user__pic{
+    width: 141px;
+    height: 141px;
+    border-radius: 50%;
+    background-image: url(../images/common/user.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 40px;
+}
+
+.user__info{
+margin-top:10px;
+}
+
+.user__name{
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 34px;
+}
+
+.user__desc{
+    margin-top:5px;
+    opacity: 0.8 ;
+}

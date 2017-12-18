@@ -1,0 +1,97 @@
+.wel_container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-areas: "left top avto "
+                         "left welcome right"
+                         "left footer right";
+
+}
+
+.authorization{
+ grid-area: avto;
+ display:flex;
+ justify-content: flex-end;
+ 
+
+}
+
+.button_auto{
+    margin-right:100px;
+    margin-top: 24px;
+    width: 180px;
+    height: 45px;
+    
+}
+
+.button__text{
+    color: #ffffff;
+    font-family: robotoregular;
+    font-size: 16px;
+    display:flex;
+    align-items:  center;
+    justify-content: center;
+}
+
+
+.welcome{
+grid-area: welcome;
+background-color:$gray_footer_lighter;
+opacity:0.5 ; 
+}
+
+.welcome__content{
+    grid-area: welcome;
+    z-index: 10;
+}
+
+
+
+.wel__menu{
+    display: flex;
+    justify-content: space-around;
+   
+}
+
+.wel__menu_item{
+  background-color:$blue_button; 
+  
+  width:100%;
+  
+
+  &:hover{
+    background-color:$blue_button_hover; 
+    transition: background-color 1s;
+  }
+
+}
+
+.wel__menu_link{
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    padding: 14px 0;
+
+}
+
+.wel__link_middle{
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+}
+.welcome__descr{
+display: flex;
+
+align-items: flex-end;
+}
+
+.welcome__footer{
+    grid-area: footer;
+    display: flex;
+    justify-content: space-around
+    }
+
+.descr_content{
+    padding-bottom:30px;
+}
+
