@@ -1,0 +1,44 @@
+extends ../template
+
+block variables 
+    - var title = 'Authorization'
+
+block content
+    .welcome
+        .white_title.main_title Авторизуйтесь
+            form(action="#", method="post").form_block 
+                .form__row
+                    svg.icon
+                        use(xlink:href="assets/svg/sprite.svg#login")
+                    label(for='login')
+                        span.form_title Логин
+                        input#name.form-control(type='text', placeholder='first and last' name='login')
+                .form__row
+                    label(for='password')
+                        svg.icon
+                            use(xlink:href="assets/svg/sprite.svg#password")
+                        span.form_title Пароль
+                        input#name.form-control(type='text', placeholder='first and last' name='password')
+                .check_button
+                    label(for="human")
+                    input#name.human(type="checkbox")
+                    span.form_tytle.check_title Я человек
+                .check_title Вы точно не робот?
+                .radio_row    
+                    .radio_buttons
+                        label(for="yes")
+                        span.form_tytle.check_title Да
+                        input#name.yes(type="radio")
+                    .radio_buttons
+                        label(for="no")
+                        span.form_tytle.check_title Не уверен
+                        input#name.yes(type="radio")
+            .avto__links
+                .avto__link
+                    a(href="#") На главную
+                .avto__link
+                    a(href="#") Войти                   
+    .welcome__footer
+        .welcome__descr.descr_content
+            p jefiorfhwgrtwfjghoirjfvbhgrlfidheoihioedwhqewdo
+            

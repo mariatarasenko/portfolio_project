@@ -2,6 +2,98 @@ extends ../template
 
 block variables 
     - var title = 'my works'
+   
+   
 
 block content
-    h1 My works
+    include ../common/header.pug
+    section.works.section
+        img(src="#", alt="img")
+        .works__title.main_title Мои работы
+        .slider
+            .slider__item.slider__item_active
+                .slider__info
+                    .works__list_title
+                        .subtitle сайт бизнесс центра
+                    .works__list_techn HTML, CSS, Jquery
+                    .works__button.active__button
+                        a(href="#").works__button_link
+                .slider_display
+                    img(src="", alt="1")
+                .slider__btns
+                    .slider__btns_one
+                        img(src="", alt="2")
+                        icon(portf_arrow_down,white)
+                    .slider__btns_one
+                        img(src="", alt="3")
+                        icon(portf_arrow_up,white)
+            .slider__item
+                .slider__info
+                    .works__list_title
+                        .subtitle корпоративный сайт спрорт клуба
+                    .works__list_techn HTML, CSS, JavaScript
+                    .works__button.active__button
+                        a(href="#").works__button_link
+                .slider_display
+                    img(src="", alt="1")
+                .slider__btns
+                    .slider__btns_one
+                        img(src="", alt="2")
+                        icon(portf_arrow_down,white)
+                    .slider__btns_one
+                        img(src="", alt="3")
+                        icon(portf_arrow_up,white)
+            .slider__item
+                .slider__info
+                    .works__list_title
+                        .subtitle сайт школы онлайн образования
+                    .works__list_techn Pug, SCSS, Javascript
+                    .works__button.active__button
+                        a(href="#").works__button_link
+                .slider_display
+                    img(src="", alt="1")
+                .slider__btns
+                    .slider__btns_one
+                        img(src="", alt="2")
+                        icon(portf_arrow_down,white)
+                    .slider__btns_one
+                        img(src="", alt="3")
+                        icon(portf_arrow_up,white)
+                    
+    section.section.reviews
+        img(src="", alt="1")
+        .reviews__title.main_title что обо мне говорят
+            .reviews__items
+                .reviews__items_one
+                    .reviews_photo_left //tyt dat back kartinku
+                    .reviews__text //тут дать бэкграундом картинку
+                        span.revews__text_content
+                    .reviews__autor
+                        p.reviews__autor_name
+                        p.reviews__autor_prof
+        form(action="#", method="post").form_block
+            .form__title.subtitle Связаться со мной 
+            .form__row
+                label(for='name')
+                    span.form_title ваше имя
+                    input#name.form-control(type='text', placeholder='first and last' name='name')
+            .form__row
+                label(for='email')
+                    span.form_title ваш email
+                    input#name.form-control(type='text', placeholder='first and last' name='email')
+            .form__row
+                label(for='comment')
+                    span.form_title ваше сообщение
+                    textarea(name="comment", cols="30", rows="10")
+            .form__buttons_row
+                button(type="submit").button.button_blue
+                    span.button__text Отправить 
+                button(type="reset").button.button_transp
+                    span.button__text Очистить
+        svg.icon
+            use(xlink:href="assets/svg/sprite.svg#portf_arrow_up")
+
+        include ../common/footer.pug
+        
+        
+                

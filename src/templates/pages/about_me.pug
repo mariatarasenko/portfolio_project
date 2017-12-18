@@ -4,4 +4,88 @@ block variables
     - var title = 'About me'
 
 block content
-    h1 About me
+    
+    section.section.about
+        .about__left   
+            .about__left_title.main_title About me
+            .info
+                .info__photo
+                    img(src="", alt="").info__photo_avatar
+                .info__descr
+                    .info__descr_title
+                        .subtitle Кто я
+                    .info__descr_text.descr_content
+                        p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                        p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!
+        .about__right
+            .about__right_title
+                .subtitle Чем я могу быть вам полезен
+            .about__right_descr.descr_content
+                p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+            .about__right_skills
+                ul.skills__list
+                    li.skills__list_item
+                        .skills__row
+                            .skills__row_title Frontend
+                            ul.skills__row_list
+                                each skill in ['Html5', 'Css3', 'JavaScript']
+                                    li.skills__row_item
+                                        .skill
+                                            svg.skill__circle
+                                            .skill__title #{skill}
+                            .skills__row_title Backend
+                            ul.skills__row_list
+                                each skill in ['PHP', 'MySql', 'Node.js','npm']
+                                    li.skills__row_item
+                                        .skill
+                                            svg.skill__circle
+                                            .skill__title #{skill}
+                            .skills__row_title Workflow
+                            ul.skills__row_list
+                                each skill in ['Git', 'Gulp', 'Bower']
+                                    li.skills__row_item
+                                        .skill
+                                            svg.skill__circle
+                                            .skill__title #{skill}
+    section.section.map
+        #map
+        .map__contacts
+            .contacts
+                .contacts__title
+                    .subtitle Контакты
+                ul.contacts__list
+                    .contacts__row
+                        li.contacts__item
+                            .contacts__icon
+                                svg.icon
+                                    use(xlink:href="assets/svg/sprite.svg#skype") 
+                            .contacts__text matarasenko
+                        li.contacts__item
+                            .contacts__icon
+                                svg.icon
+                                    use(xlink:href="assets/svg/sprite.svg#envelope2") 
+                            .contacts__text mariaatarasenko@gmail.com
+                    .contacts__row
+                        li.contacts__item
+                            .contacts__icon
+                                svg.icon
+                                    use(xlink:href="assets/svg/sprite.svg#phone") 
+                            .contacts__text +48 503 243 304
+                        li.contacts__item
+                            .contacts__icon
+                                svg.icon
+                                    use(xlink:href="assets/svg/sprite.svg#map_marker") 
+                            .contacts__text Варшава
+
+        include ../common/footer.pug
+                        
+
+                    
+
+
+
+
+                
+        
+
+
