@@ -1,0 +1,15 @@
+section.section.header
+        .header__socials
+            ul.socials
+                each item in [`vk`,`fb`,`in`]
+                    li.socials__item
+                        a(href="#" class=`socials__links social__links_${item}`)
+        .header__title
+            .section__tytle
+                img(src="", alt="stars").section__tytle_pic
+            include user.pug
+                .hamburger.header__menu
+                    .hamburger__top
+                    .hamburger__middle
+                    .hamburger__bottom
+                .arrow_down.header__scroll

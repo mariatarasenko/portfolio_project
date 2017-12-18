@@ -41,7 +41,7 @@ const paths = {
         dest: 'build/assets/scripts/'
     },
     svg: {
-        src: 'src/svg/*.svg',
+        src: 'src/icons/*.svg',
         dest: 'build/assets/svg/'
     }
 };
@@ -106,26 +106,40 @@ function fonts() {
     return gulp.src(paths.fonts.src)
         .pipe(gulp.dest(paths.fonts.dest));
 }
- //svg                
+ //svg  
+ const config = {
+    mode: {
+      symbol: {
+        sprite: "../sprite.svg",
+        example: {
+          dest: '../tmp/spriteSvgDemo.html' // демо html
+        }
+      }
+    }
+  };              
 function svg() {
-        return gulp.src(paths.images.src + 'icons/*.svg')
+        return gulp.src(paths.svg.src)
         // remove all fill, style and stroke declarations in out shapes
-		.pipe(gulpCheerio({
-			run: function ($) {
-				$('[fill]').removeAttr('fill');
-            },
-            parserOptions: {xmlMode: true}
+        .pipe(svgMin({
+            js2svg: {
+              pretty: true
+            }
+          }))
+        .pipe(gulpCheerio({
+			run: function($) {
+                $('[fill]').removeAttr('fill');
+                $('[stroke]').removeAttr('stroke');
+                $('[style]').removeAttr('style');
+              },
+              parserOptions: {
+                xmlMode: true
+              }
 		}))
-		// cheerio plugin create unnecessary string '&gt;', so replace it.
-		// .pipe(gulpReplace('&gt;', '>'))
-            // build svg sprite
-        .pipe(svgSprite({
-				mode: "symbols",
-				preview: false
-				
-			}
-		))
-        .pipe(gulp.dest(paths.images.dest));
+		//cheerio plugin create unnecessary string '&gt;', so replace it.
+		.pipe(gulpReplace('&gt;', '>'))
+            //build svg sprite
+        .pipe(svgSprite(config))
+        .pipe(gulp.dest(paths.svg.dest));
 }
               
 exports.templates = templates;
