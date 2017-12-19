@@ -4,22 +4,25 @@ block variables
     - var title = 'My page'
 
 block content
-    .authorization
-        button(type="submit").button.button_transp
-            span.button__text Авторизироваться 
-    .welcome
-        include ../common/user.pug 
-        ul.wel__socials.wel__row
-            each item in [`vk`,`fb`,`in`]
-                li.wel__socials__item
-                    a(href="#" class=`wel__socials__links social__links_${item}`)
-        ul.wel__menu.wel__row
-            each item in ['Мои работы','Обо мне','Блог']
-                li.wel__menu_item
-                    a(href="#" class=`wel__menu_links`) #{item}
-    .welcome__footer
-        .welcome__descr.descr_content
-            p jefiorfhwgrtwfjghoirjfvbhgrlfidheoihioedwhqewdo
+    section.section.top_section.wel_section
+        .wel_container 
+            .authorization
+                button(type="submit").button.button_transp.button_auto
+                    span.button__text Авторизироваться 
+            .welcome
+            .welcome__content
+                include ../common/user.pug 
+                include ../common/socials.pug
+                ul.wel__menu.wel__row
+                    li.wel__menu_item
+                        a(href="my_works.html").wel__menu_link Мои работы
+                    li.wel__menu_item.wel__link_middle
+                        a(href="about_me.html").wel__menu_link Обо мне
+                    li.wel__menu_item
+                        a(href="blog.html").wel__menu_link Блог
+            .welcome__footer
+                .welcome__descr
+                    p.descr_content © Мария Тарасенко | создано с любовью в LoftSchool | 2017
             
 
                 

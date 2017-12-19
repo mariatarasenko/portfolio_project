@@ -1,9 +1,6 @@
 section.section.header
         .header__socials
-            ul.socials
-                each item in [`vk`,`fb`,`in`]
-                    li.socials__item
-                        a(href="#" class=`socials__links social__links_${item}`)
+            include socials.pug
         .header__title
             .section__tytle
                 img(src="", alt="stars").section__tytle_pic
