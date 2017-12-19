@@ -4,5 +4,27 @@ block variables
     - var title = 'My page'
 
 block content
-    h1 Main page
-    p blablablaflflflfggglld 
+    .authorization
+        button(type="submit").button.button_transp
+            span.button__text Авторизироваться 
+    .welcome
+        include ../common/user.pug 
+        ul.wel__socials.wel__row
+            each item in [`vk`,`fb`,`in`]
+                li.wel__socials__item
+                    a(href="#" class=`wel__socials__links social__links_${item}`)
+        ul.wel__menu.wel__row
+            each item in ['Мои работы','Обо мне','Блог']
+                li.wel__menu_item
+                    a(href="#" class=`wel__menu_links`) #{item}
+    .welcome__footer
+        .welcome__descr.descr_content
+            p jefiorfhwgrtwfjghoirjfvbhgrlfidheoihioedwhqewdo
+            
+
+                
+        
+    
+     
+
+    
