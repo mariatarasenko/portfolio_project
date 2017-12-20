@@ -1,0 +1,80 @@
+.reviews{
+   
+    height: 1200px;
+    background-image: url(../images/works/bg_works.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 2fr 3fr 4fr 1fr 2fr;
+    grid-template-areas: "left title right "
+                         "left reviews right"
+                         "left form right"
+                         "left arrow right"
+                         "footer footer footer";
+}
+
+.reviews__title{
+    position: relative;
+    //width: 333px;
+    grid-area:title; 
+    display: flex;
+    justify-content: center;
+}
+.form_block{
+    margin: 0 auto;
+    grid-area:form;   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 254, 254, 0.085); 
+    width: 50%;
+    //height:465px ;
+}
+.arrow_up {
+    grid-area:arrow;  
+}
+
+.reviews__title_text{
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    width: 350px;
+    line-height: 66px;
+    text-align: center;
+}
+
+.reviews__items{
+    grid-area: reviews;
+    display:inline-flex ;
+
+}
+.reviews_photo{
+    margin: 0 auto;
+    margin-bottom: 25px;
+}
+.reviews_photo_right{
+background-image: url(../images/works/Dmitriy.jpg)
+}
+
+.reviews_photo_left{
+    background-image: url(../images/works/Vladimir.jpg)
+}
+
+.reviews__items_one{
+    text-align:center;
+     
+}
+.reviews__text_content{
+    font-family: 'robotoitalic';
+   
+}
+
+.reviews__autor{
+    padding-top: 29px;
+}
+
+.form__title{
+    color:#fff;
+}

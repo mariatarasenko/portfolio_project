@@ -1,6 +1,42 @@
 .icon {
 	display: inline-block;
-	width: 2rem;
-	height: 2rem;
+	max-width: 2rem;
+	max-height: 2rem;
 	fill:currentcolor;
+}
+
+.small_icon{
+	width: 20px;
+	height:19px ;
+}
+
+.bg_icon{
+	z-index:10;
+	width: 100vw;
+	height: 360px;
+	//margin-top: -200px;
+	
+	// top: 55%;
+	// left: 0;
+	//margin-top: -150px;
+
+}
+
+.my_works__icon{
+    position: absolute;
+	top: 55%;
+	left: 0;
+	z-index: 15;
+	min-width: 300px;
+	width: 400px;
+	height: 171px;
+	
+}
+.stars_img{
+    position: relative;
+    margin: 0 auto;
+}
+.reviews__icon{
+	width: 173px;
+	height: 202px;
 }

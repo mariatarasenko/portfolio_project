@@ -6,71 +6,101 @@ block variables
    
 
 block content
-    include ../common/header.pug
+    
     section.works_section.section.top_section
-        img(src="#", alt="img")
-        .works__title.main_title Мои работы
+        include ../common/header.pug
+        .slider__title_bg
+            svg.bg_icon.svg_dark
+                use(xlink:href="assets/svg/sprite.svg#bg")
+            .slider__title_content
+                .slider__title_order
+                    svg.my_works__icon.svg_white_transp.stars_img
+                        use(xlink:href="assets/svg/sprite.svg#stars4") 
+                    .works__title.main_title Мои работы
+    section.slider_section.section    
         .slider
-            .slider__item.slider__item_active
-                .slider__info
-                    .works__list_title
-                        .subtitle сайт бизнесс центра
-                    .works__list_techn HTML, CSS, Jquery
-                    .works__button.active__button
-                        a(href="#").works__button_link
-                .slider_display
-                    img(src="", alt="1")
-                .slider__btns
-                    .slider__btns_one
-                        img(src="", alt="2")
-                        icon(portf_arrow_down,white)
-                    .slider__btns_one
-                        img(src="", alt="3")
-                        icon(portf_arrow_up,white)
             .slider__item
                 .slider__info
                     .works__list_title
-                        .subtitle корпоративный сайт спрорт клуба
+                        .subtitle сайт бизнес центра
+                    .works__list_techn HTML, CSS, Jquery, Javascript
+                    .works__button.active__button
+                        svg.svg_white.svg_link.small_icon
+                            use(xlink:href="assets/svg/sprite.svg#link")
+                        a(href="#").works__button_link Посмотреть сайт
+                .slider_display
+                    img(src="assets/images/works/works_bus.jpg", alt="1").middle.slider__main_img
+                .slider__btns
+                    .slider__btns_one.slider__btns_down.btn_img_yoga
+                        .svg_slider.middle
+                            svg.icon.svg_white
+                                use(xlink:href="assets/svg/sprite.svg#portf_arrow_down")
+                    .slider__btns_one.slider__btns_up.btn_img_school
+                        .svg_slider.middle
+                            svg.icon.svg_white
+                                use(xlink:href="assets/svg/sprite.svg#portf_arrow_up")
+            .slider__item
+                .slider__info
+                    .works__list_title
+                        .subtitle корпоративный сайт школы йоги
                     .works__list_techn HTML, CSS, JavaScript
                     .works__button.active__button
-                        a(href="#").works__button_link
+                        svg.svg_white.svg_link.small_icon
+                            use(xlink:href="assets/svg/sprite.svg#link")
+                        a(href="#").works__button_link Посмотреть сайт
                 .slider_display
-                    img(src="", alt="1")
+                    img(src="assets/images/works/works_yoga.jpg", alt="1").middle.slider__main_img
                 .slider__btns
-                    .slider__btns_one
-                        img(src="", alt="2")
-                        icon(portf_arrow_down,white)
-                    .slider__btns_one
-                        img(src="", alt="3")
-                        icon(portf_arrow_up,white)
-            .slider__item
+                    .slider__btns_one.slider__btns_down.btn_img_school
+                        .svg_slider.middle
+                            svg.icon.svg_white
+                                use(xlink:href="assets/svg/sprite.svg#portf_arrow_down")
+                    .slider__btns_one.slider__btns_up.btn_img_bus
+                        .svg_slider.middle
+                            svg.icon.svg_white
+                                use(xlink:href="assets/svg/sprite.svg#portf_arrow_up")
+            .slider__item.slider__item_active
                 .slider__info
                     .works__list_title
                         .subtitle сайт школы онлайн образования
                     .works__list_techn Pug, SCSS, Javascript
                     .works__button.active__button
-                        a(href="#").works__button_link
+                        svg.svg_white.svg_link.small_icon
+                            use(xlink:href="assets/svg/sprite.svg#link")
+                        a(href="#").works__button_link Посмотреть сайт
                 .slider_display
-                    img(src="", alt="1")
+                    img(src="assets/images/works/works_school.png", alt="1").middle.slider__main_img
                 .slider__btns
-                    .slider__btns_one
-                        img(src="", alt="2")
-                        icon(portf_arrow_down,white)
-                    .slider__btns_one
-                        img(src="", alt="3")
-                        icon(portf_arrow_up,white)
+                    .slider__btns_one.slider__btns_down.btn_img_bus
+                        .svg_slider.middle
+                            svg.icon.svg_white
+                                use(xlink:href="assets/svg/sprite.svg#portf_arrow_down")
+                    .slider__btns_one.slider__btns_up.btn_img_yoga
+                        .svg_slider.middle
+                            svg.icon.svg_white
+                                use(xlink:href="assets/svg/sprite.svg#portf_arrow_up")
                     
-    section.section.reviews
-        img(src="", alt="1")
-        .reviews__title.main_title что обо мне говорят
-            .reviews__items
-                .reviews__items_one
-                    .reviews_photo_left //tyt dat back kartinku
-                    .reviews__text //тут дать бэкграундом картинку
-                        span.revews__text_content
-                    .reviews__autor
-                        p.reviews__autor_name
-                        p.reviews__autor_prof
+    section.reviews
+        .reviews__title
+            svg.reviews__icon.svg_trans
+                use(xlink:href="assets/svg/sprite.svg#stars3")
+            .main_title.reviews__title_text что обо мне говорят
+        .reviews__items
+            .reviews__items_one
+                .reviews_photo_right.circle__pic.reviews_photo 
+                .reviews__text 
+                    span.reviews__text_content Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                .reviews__autor
+                    p.reviews__text_content <strong>Ковальчук Дмитрий</strong> <br> — основатель Loftschool
+            .reviews__items_one
+                .reviews_photo_left.circle__pic.reviews_photo 
+                .reviews__text 
+                    span.reviews__text_content Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+                .reviews__autor
+                    p.reviews__text_content <strong>Сабанцев Владимир</strong> <br> — преподаватель
+        //- form(action="#", method="post").form_block
+        //-     .form__title.subtitle Связаться со мной 
+        //-     .form__rowp.reviews__autor_prof
         form(action="#", method="post").form_block
             .form__title.subtitle Связаться со мной 
             .form__row
@@ -90,8 +120,9 @@ block content
                     span.button__text Отправить 
                 button(type="reset").button.button_transp
                     span.button__text Очистить
-        svg.icon
-            use(xlink:href="assets/svg/sprite.svg#portf_arrow_up")
+        .arrow_up    
+            svg.icon
+                use(xlink:href="assets/svg/sprite.svg#portf_arrow_up")
 
         include ../common/footer.pug
         

@@ -1,19 +1,25 @@
 .user{
-display:flex;
-flex-direction: column;
-justify-content: center;
-text-align: center;
-align-items: center;
+// display:flex;
+// flex-direction: column;
+// justify-content: center;
+// text-align: center;
+// align-items: center;
+
 
 }
-
-.user__pic{
+.circle__pic{
     width: 141px;
     height: 141px;
     border-radius: 50%;
-    background-image: url(../images/common/user.jpg);
+   
     background-size: cover;
     background-repeat: no-repeat;
+    
+}
+.user__pic{
+    
+    background-image: url(../images/common/user.jpg);
+    
     margin-top: 40px;
 }
 
@@ -30,4 +36,15 @@ margin-top:10px;
 .user__desc{
     margin-top:5px;
     opacity: 0.8 ;
+}
+
+.user_icon{
+    max-width: 500px;
+    max-height: 350px;
+}
+
+.user__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

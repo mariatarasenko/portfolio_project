@@ -1,12 +1,17 @@
-section.section.header
-        .header__socials
-            include socials.pug
-        .header__title
-            .section__tytle
-                img(src="", alt="stars").section__tytle_pic
-            include user.pug
-                .hamburger.header__menu
-                    .hamburger__top
-                    .hamburger__middle
-                    .hamburger__bottom
-                .arrow_down.header__scroll
+.header__socials
+    include socials.pug
+.header__menu   
+    .hamburger
+        .hamburger__top
+        .hamburger__middle
+        .hamburger__bottom
+.header__title.works__user
+    .stars_img
+        svg.user_icon.svg_trans
+            use(xlink:href="assets/svg/sprite.svg#stars1")            
+            .header__user
+                include user.pug
+            
+.header__scroll
+    svg.svg_white.arrow_down.icon
+        use(xlink:href="assets/svg/sprite.svg#arrow_down") 

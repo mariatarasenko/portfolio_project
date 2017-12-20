@@ -10,7 +10,29 @@
     fill:#8ac03e;
 }
 
-.svg_white{
-    fill:#fff;
+.svg_trans{
+    fill:transparent;
+    stroke: #fff;
+    opacity: 0.2 ;
 }
 
+.svg_white{
+    fill:#fff;
+    
+}
+
+.svg_white_transp{
+    fill:#fff;
+    opacity:0.3 ;
+}
+
+.svg_dark{
+    fill:$gray_footer_lighter;
+    opacity:0.5 ;
+}
+
+.middle{
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+}
