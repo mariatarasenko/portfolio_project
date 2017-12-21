@@ -1,3 +1,43 @@
 .footer{
     grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    
+}
+.footer_row{
+    display: flex;
+}
+.footer__col{
+    flex: 1;
+}
+.my_contacts{
+    display: inline-flex;
+    width: 100%;
+}
+
+.footer__top{
+    background-color:rgba($gray_footer_lighter,0.9);
+}
+.footer__bottom{
+    background-color:rgba($dark_blue,0.9); 
+}
+
+.my_contacts__icons{
+    width: 50px;
+    margin: 0;
+    padding: 0;
+}
+
+.footer__col_middle{
+    width: 100%;
+}
+
+.menu__link{
+    color: #fff;
+    padding: 0 9px;
+
+}
+
+.menu__list{
+    padding: 20px 0;
 }

@@ -24,7 +24,7 @@ block content
                     .works__list_title
                         .subtitle сайт бизнес центра
                     .works__list_techn HTML, CSS, Jquery, Javascript
-                    .works__button.active__button
+                    .works__button.active__button.blue__button
                         svg.svg_white.svg_link.small_icon
                             use(xlink:href="assets/svg/sprite.svg#link")
                         a(href="#").works__button_link Посмотреть сайт
@@ -44,7 +44,7 @@ block content
                     .works__list_title
                         .subtitle корпоративный сайт школы йоги
                     .works__list_techn HTML, CSS, JavaScript
-                    .works__button.active__button
+                    .works__button.active__button.blue__button
                         svg.svg_white.svg_link.small_icon
                             use(xlink:href="assets/svg/sprite.svg#link")
                         a(href="#").works__button_link Посмотреть сайт
@@ -64,7 +64,7 @@ block content
                     .works__list_title
                         .subtitle сайт школы онлайн образования
                     .works__list_techn Pug, SCSS, Javascript
-                    .works__button.active__button
+                    .works__button.active__button.blue__button
                         svg.svg_white.svg_link.small_icon
                             use(xlink:href="assets/svg/sprite.svg#link")
                         a(href="#").works__button_link Посмотреть сайт
@@ -105,20 +105,20 @@ block content
             .form__title.subtitle Связаться со мной 
             .form__row
                 label(for='name')
-                    span.form_title ваше имя
-                    input#name.form-control(type='text', placeholder='first and last' name='name')
+                    span.form_title 
+                    input#name.form__content.form__text(type='text', placeholder='Ваше имя' name='name')
             .form__row
                 label(for='email')
-                    span.form_title ваш email
-                    input#name.form-control(type='text', placeholder='first and last' name='email')
+                    span.form_title 
+                    input#name.form__content.form__text(type='text', placeholder='Ваш email' name='email')
             .form__row
                 label(for='comment')
-                    span.form_title ваше сообщение
-                    textarea(name="comment", cols="30", rows="10")
+                    span.form_title 
+                    textarea.form__content.form__coment.form__text(name="comment", placeholder='Ваше сообщение', cols="30", rows="10" )
             .form__buttons_row
-                button(type="submit").button.button_blue
+                button(type="submit").button__form.blue__button
                     span.button__text Отправить 
-                button(type="reset").button.button_transp
+                button(type="reset").button__form.button_transp
                     span.button__text Очистить
         .arrow_up    
             svg.icon
