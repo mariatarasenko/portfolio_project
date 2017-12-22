@@ -6,33 +6,33 @@ footer.footer
                             p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. 
                     .footer__col.footer__col_middle
                         nav.menu
-                            ul.menu__list
-                                each item in ['Мои работы','Обо мне','Блог','авторизация']
-                                    li.menu__item
+                            ul.menu__list.footer__descr
+                                each item in ['Мои работы','Обо мне','Блог','Aвторизация']
+                                    li.descr_content_text.menu__item
                                         a(href="#").menu__link #{item}
                         ul.my_contacts
                             li.my_contacts__icons
                                 a(href="#")
-                                    svg.icon
+                                    svg.icon_footer
                                         use(xlink:href="assets/svg/sprite.svg#vk")
                             li.my_contacts__icons 
                                 a(href="#")
-                                    svg.icon
+                                    svg.icon_footer
                                         use(xlink:href="assets/svg/sprite.svg#github")
                             li.my_contacts__icons 
                                 a(href="#")
-                                    svg.icon
+                                    svg.icon_footer
                                         use(xlink:href="assets/svg/sprite.svg#in")
                     .footer__col.footer__col_left
                      
                         
-                        .footer__descr.descr_content
-                            p skype_kdn
-                            p astahov@gmail.com
-                            p +7 931 200 93 24
-                            p Новосибирск, ул. Инская, д.14
+                        .footer__descr
+                            p.descr_content_text skype_kdn
+                            p.descr_content_text astahov@gmail.com
+                            p.descr_content_text +7 931 200 93 24
+                            p.descr_content_text Новосибирск, ул. Инская, д.14
                     
                        
-            .footer__row.footer__bottom
+            .footer_row.footer__bottom
                 .footer__bottom_content © Тарасенко Мария | Создано с любовью в LoftSchool | 2017
                     

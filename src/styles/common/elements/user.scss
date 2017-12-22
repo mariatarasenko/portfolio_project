@@ -38,13 +38,15 @@ margin-top:10px;
     opacity: 0.8 ;
 }
 
-.user_icon{
-    max-width: 500px;
-    max-height: 350px;
-}
+
 
 .user__content{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.blog__title_content{
+    position: absolute;
+    left: 42%;
 }

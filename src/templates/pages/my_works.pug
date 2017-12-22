@@ -10,14 +10,15 @@ block content
     section.works_section.section.top_section
         include ../common/header.pug
         .slider__title_bg
-            svg.bg_icon.svg_dark
-                use(xlink:href="assets/svg/sprite.svg#bg")
-            .slider__title_content
-                .slider__title_order
-                    svg.my_works__icon.svg_white_transp.stars_img
-                        use(xlink:href="assets/svg/sprite.svg#stars4") 
-                    .works__title.main_title Мои работы
-    section.slider_section.section    
+            svg.bg_icon.svg_dark.bg_icon_works
+                use(xlink:href="assets/svg/sprite.svg#bg_header")
+            
+            .slider__title_order
+                svg.my_works__icon.svg_white_transp.stars_img
+                    use(xlink:href="assets/svg/sprite.svg#stars4") 
+                .works__title.main_title Мои работы   
+    section.slider_section.section 
+        
         .slider
             .slider__item
                 .slider__info
@@ -82,7 +83,7 @@ block content
                     
     section.reviews
         .reviews__title
-            svg.reviews__icon.svg_trans
+            svg.reviews__icon.svg_white_transp
                 use(xlink:href="assets/svg/sprite.svg#stars3")
             .main_title.reviews__title_text что обо мне говорят
         .reviews__items

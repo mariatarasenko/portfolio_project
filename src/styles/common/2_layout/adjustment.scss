@@ -40,6 +40,8 @@
     font-family: sansusregular;
 }
 
+
+
 .subtitle{
     color:$black_title;
     font-family: "sansusregular";
@@ -48,6 +50,18 @@
     line-height: 40.98px;
     text-transform: uppercase;
     text-align: center;
+    position: relative;
+
+    &::after{
+        content: '';
+        position: absolute;
+        width: 5.625rem;
+        height: .1875rem;
+        background: #566358;
+        bottom: -.9375rem;
+        left: 50%;
+        transform: translate(-50%);
+    }
 }
 
 

@@ -11,9 +11,11 @@
 }
 
 .bg_icon{
-	z-index:10;
-	width: 100vw;
-	height: 360px;
+	z-index: 10;
+    width: 100vw;
+	height: 100%;
+   // margin-top: -171px;
+    display: flex;
 	//margin-top: -200px;
 	
 	// top: 55%;
@@ -23,20 +25,37 @@
 }
 
 .my_works__icon{
-    position: absolute;
-	top: 55%;
-	left: 0;
-	z-index: 15;
+    
 	min-width: 300px;
 	width: 400px;
 	height: 171px;
+  margin-top: -15px;
 	
 }
 .stars_img{
-    position: relative;
-    margin: 0 auto;
+    // position: relative;
+	// margin: 0 auto;
+	// width: 100%;
+    // height: 100%;
 }
 .reviews__icon{
 	width: 173px;
 	height: 202px;
+}
+
+.icon_footer {
+	display: inline-block;
+	width: 2rem;
+	height: 1rem;
+	fill:currentcolor;
+}
+.blog__icon{
+	
+}
+
+.svg_blog_top{
+	position: absolute;
+    top: 3%;
+    width: 100%;
+    height: 250px;
 }
