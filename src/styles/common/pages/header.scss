@@ -1,19 +1,14 @@
 .user_icon{
   width: 100%; 
-  min-height: 260px;
+  min-height: rem(260px);
   
 }
 
-.arrow_down{
-  // display: flex;
-  // align-items: center;
-  // justify-content:center; 
-}
 .header__menu_blog{
   display:flex;
   justify-content: flex-end;
-  margin-top:20px;
-  margin-right:50px;
+  margin-top:rem(20px);
+  margin-right:rem(50px);
 }
 .hamburger{
     position: relative;

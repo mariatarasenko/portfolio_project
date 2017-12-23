@@ -31,8 +31,12 @@
     opacity:0.5 ;
 }
 
-.middle{
-    display: flex;
-    justify-content: center ;
-    align-items: center;
+
+
+.svg_biege{
+ fill:$about_me;
+}
+
+.svg_blue{
+ color:$blue_button;
 }

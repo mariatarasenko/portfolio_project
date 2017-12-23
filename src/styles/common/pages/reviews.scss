@@ -1,5 +1,5 @@
 .reviews{
-   min-height:1375px; 
+   min-height:rem(1375px); 
     height:100% ;
     background-image: url(../images/works/bg_works.png);
     background-repeat: no-repeat;
@@ -16,9 +16,8 @@
 }
 
 .reviews__title{
-    padding-top: 20px;
+    padding-top: rem(20px);
     position: relative;
-    //width: 333px;
     grid-area:title; 
     display: flex;
     justify-content: center;
@@ -32,8 +31,8 @@
     position: absolute;
     top: 30%;
     left: 30%;
-    width: 350px;
-    line-height: 66px;
+    width: rem(350px);
+    line-height: rem(66px);
     text-align: center;
 }
 
@@ -44,7 +43,7 @@
 }
 .reviews_photo{
     margin: 0 auto;
-    margin-bottom: 25px;
+    margin-bottom: rem(25px);
 }
 .reviews_photo_right{
 background-image: url(../images/works/Dmitriy.jpg)
@@ -64,29 +63,29 @@ background-image: url(../images/works/Dmitriy.jpg)
 }
 
 .reviews__autor{
-    padding-top: 29px;
+    padding-top: rem(29px);
 }
 
 .form_block{
     margin-left: 25%;
-    margin-top: 55px;
+    margin-top: rem(55px);
     grid-area:form;   
     display: flex;
     flex-direction: column;
     align-items: center;
     background: rgba(255, 254, 254, 0.085); 
-    width: 384px
+    width: rem(384px);
     
 }
 
 
 .form__row{
     flex:1;
-    margin-bottom: 25px;
+    margin-bottom: rem(25px);
 }
 .form__content{
-    width: 343px;
-    height: 48px;
+    width: rem(343px);
+    height: rem(48px);
     background-color:rgba(248, 248, 248, 0.192);
     border: none;
 
@@ -99,22 +98,22 @@ background-image: url(../images/works/Dmitriy.jpg)
 .form__text{
     
     font-family: Roboto;
-    font-size: 16px;
+    font-size: rem(16px);
    
 }
 .form__title{
     color:#fff;
-    margin-top: 32px;
-    margin-bottom: 44px
+    margin-top: rem(32px);
+    margin-bottom: rem(44px)
 }
 .form__coment{
     
-    height: 133px;
+    height: rem(133px);
 }
 
 .button__form{
     flex: 1;
-    padding: 15px 0;
+    padding: rem(15px) 0;
     border: none;
 }
 .form__buttons_row{
@@ -122,7 +121,7 @@ background-image: url(../images/works/Dmitriy.jpg)
     display: flex;
 }
 .arrow_up{
-    padding: 20px 0;
+    padding: rem(20px) 0;
     display: flex;
     justify-content: center;
 }

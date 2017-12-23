@@ -18,17 +18,17 @@
 }
 
 .button_auto{
-    margin-right:100px;
-    margin-top: 24px;
-    width: 180px;
-    height: 45px;
+    margin-right:rem(100px);
+    margin-top: rem(24px);
+    width: rem(180px);
+    height: rem(45px);
     
 }
 
 .button__text{
     color: #ffffff;
     font-family: robotoregular;
-    font-size: 16px;
+    font-size: rem(16px);
     display:flex;
     align-items:  center;
     justify-content: center;
@@ -71,7 +71,7 @@ opacity:0.5 ;
     color:#fff;
     display:flex;
     justify-content:center;
-    padding: 14px 0;
+    padding: rem(14px) 0;
 
 }
 
@@ -92,6 +92,6 @@ align-items: flex-end;
     }
 
 .descr_content{
-    padding-bottom:30px;
+    padding-bottom:rem(30px);
 }
 

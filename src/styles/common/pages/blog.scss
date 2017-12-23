@@ -9,7 +9,7 @@
 
 }
 .user__top{
-    margin-top:30px;
+    margin-top:rem(30px);
     position:relative;
     grid-area: user;
     display: flex;
@@ -43,19 +43,19 @@
 
 .top_icon{
     grid-area: svg_top; 
-    margin-top: -230px;
+    margin-top: rem(-230px);
     
 }
 
 .articles__content {
     grid-area: articles ;   
-    padding: 10px 25px;
+    padding: rem(10px) rem(25px);
 }
 
 .article_title{
     color: $black_title;
     font-family: sansusregular;
-    font-size: 35px;
+    font-size: rem(35px);
 }
 .article_date{
     color:$dark_blue;
@@ -74,16 +74,16 @@
 }
 
 .article_content{
-    padding: 10px 0;
+    padding: rem(10px) 0;
 }
 .articles__item{
-    padding-top:10px;
-    padding-left:20px;
+    padding-top:rem(10px);
+    padding-left:rem(20px);
 }
 .article_photo{
-    padding:15px 0;
+    padding:rem(15px)x 0;
 }
 .articles__content_item{
-    padding:20px 0 10px 0;
+    padding:rem(20px) 0 rem(10px) 0;
     border-bottom: 5px solid #DCDCDC;
 }

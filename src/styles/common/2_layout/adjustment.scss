@@ -20,6 +20,7 @@
     margin: 0;
     padding: 0;
     height: 100%;
+    min-height:1200px;
     width: 100%;
     min-height: rem(650px);
     display: flex;
@@ -67,5 +68,9 @@
 
 
 
-
+.middle{
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+}
 

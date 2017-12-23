@@ -1,12 +1,13 @@
 .works_section{
     width: 100%;
     display: grid;
+    position: relative;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 1fr 4fr 1fr 2fr;
     grid-template-areas: "icons top burger "
                          "left user right"
                          "left scroll right"
-                         "footer footer footer";
+                         "bot_part bot_part bot_part";
 
 }
 
@@ -18,8 +19,8 @@
     grid-area: burger;
     display:flex ;
     justify-content: flex-end;
-    padding-right: 20px;
-    padding-top: 35px;
+    padding-right:rem(20px);
+    padding-top: rem(35px);
 
 }
 
@@ -31,9 +32,7 @@
 .header__scroll{
     grid-area: scroll;
     text-align: center;
-    padding-top: 20px;
-    // display: flex;
-    // align-items: center;
+    padding-top: rem(40px);
 }
 .header__user{
    
@@ -45,31 +44,23 @@
     
 }
 .slider__title_bg{
-    //width: 100%;
-    grid-area: footer  ;
+    grid-area: bot_part  ;
     position: relative;
-    //height: 100%;
     display: flex;
     flex-direction: column;
-    margin-top:-170px ;
+    margin-top:rem(-170px) ;
 }
 
 .bg_icon_works{
     flex:1;
 }
-.slider__title_content{
-    // position: absolute;
-    // bottom: 10%;
-    // left: 35%;
 
-}
 .slider__title_order{
 
    position:relative;  
    width: 100vw;
    height:100% ;
    background-color: rgba($gray_footer_lighter,0.5);
-   //margin-top: -14px;
    padding: 0;
    display: flex;
    justify-content: center;
@@ -83,7 +74,6 @@
 .slider_section{
 }
 .slider__item{
- //opacity:0; 
  display: none;
 
 }
@@ -127,21 +117,21 @@
 }
 
 .btn_img_yoga{
-    max-height:230px;
+    max-height:rem(230px);
     width: 100%;
     background-image: url(../images/works/works_yoga.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
 .btn_img_school{
-    max-height:230px;
+    max-height:rem(230px);
     width: 100%;
     background-image: url(../images/works/works_school.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 .btn_img_bus{
-    max-height:230px;
+    max-height:rem(230px);
     width: 100%;
     background-image: url(../images/works/works_bus.jpg);
     background-repeat: no-repeat;
@@ -155,22 +145,22 @@
 }
 
 .slider__main_img{
-    margin-top: 10px;
+    margin-top: rem(10px);
 }
 
 .works__list_techn{
     font-family: 'robotobold';
     color: $dark_blue;
     text-transform: uppercase;
-    padding-bottom:58px;   
+    padding-bottom:rem(58px);   
 }
 
 .blue__button{
     background-color: #004cd1; 
 }
 .works__button{
-    width: 201px;
-    height: 45px;
+    width: rem(201px);
+    height:rem(45px);
      
     display: flex;
     justify-content: center ;
@@ -179,22 +169,16 @@
 
 .works__button_link{
    color:#fff;
-   padding-left: 10px;
+   padding-left:rem(10px);
    
 
 }
 
 .works__list_title{
-    padding-bottom:58px;   
+    padding-bottom:rem(58px);   
 }
 
 .slider{
     width: 100%;
     height: 100%;
-}
-
-
-.bg_icon_works{
-   // margin-top: -10%;
-
 }
