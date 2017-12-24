@@ -37,8 +37,8 @@
 
 .welcome{
 grid-area: welcome;
-background-color:$gray_footer_lighter;
-opacity:0.5 ; 
+background-color:rgba($gray_footer_lighter, 0.5);
+ 
 }
 
 .welcome__content{

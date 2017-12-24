@@ -29,6 +29,7 @@
     width: rem(50px);
     margin: 0;
     padding: 0;
+    
 }
 
 
@@ -63,4 +64,8 @@
 
 .menu__item{
     display: inline-flex;
+}
+
+.my_contacts__link{
+    color: $blue_button;
 }

@@ -1,0 +1,190 @@
+.avto__welcome{
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.avto__title{
+    color: #ffffff;
+    font-family: "sansusregular";
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 41px;
+    text-transform: uppercase;
+    padding-bottom: 40px;
+}
+
+.sign_in{
+    //width: rem(380px);
+    color: #ffffff;
+    text-align: center;
+    border-radius: rem(5px);
+    overflow: hidden;
+    padding-top: rem(35px);
+}
+
+.label_container{
+    margin-bottom: rem(20px);
+    width: rem(380px);
+}
+
+.label_wrap {
+    display: inline-block;
+    width: rem(340px);
+    height: rem(45px);
+    //font-size: rem(0px);
+    margin-bottom: rem(20px);
+    &:nth-child(2) {
+      margin-bottom: 0;
+    }
+  }
+
+.label__icon {
+    width: rem(45px);
+    height: rem(45px);
+    background: #f0efe9;
+    display: inline-block;
+    vertical-align: middle;
+   
+    position: relative;
+    &:after {
+      content: '';
+    }
+  }
+
+  .label__input{
+    display: inline-block;
+    vertical-align: middle;
+    width: rem(295px);
+    height: rem(45px);
+    padding: rem(8px) rem(17px);
+    outline: none;
+    border: none;
+  }
+
+  .signin__buttons {
+    margin-bottom: rem(40px);
+  }
+
+  .signin__checkbox {
+    margin-bottom: rem(20px);
+  }
+
+  .robot__check {
+    position: absolute;
+    left: -999999px;
+    &:checked {
+      & + .check__label .check__label_icon {
+        opacity: 1;
+      }
+    }
+  }
+
+  .check__label {
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      height: 20px;
+      width: 20px;
+      background: $blue_button;
+      top: -1px;
+      left: -30px;
+      border-radius: 2px;
+    }
+  }
+
+  .check__label_icon {
+    width: rem(12px);
+    height: rem(10px);
+    position: absolute;
+    left: rem(-26px);
+    top: rem(4px);
+    fill: #ffffff;
+    opacity: 0;
+    transition: all 4s;
+  }
+
+  .robot__quest {
+    margin-bottom: rem(14px);
+  }
+
+  .robot__radio {
+    display: inline-block;
+    margin-right: rem(70px);
+    &:nth-last-child(1) {
+      margin-right: 0;
+    }
+  }
+  .robot__radio-tag {
+    position: absolute;
+    left: -999999px;
+    &:checked {
+      & + .radio__label {
+        color: $blue_button;
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .radio__label {
+    position: relative;
+    transition: all 4s;
+    &:before {
+      content: '';
+      position: absolute;
+      height: rem(20px);
+      width: rem(20px);
+      border-radius: 50%;
+      background: #ffffff;
+      left: rem(-29px);
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      width: rem(8px);
+      height: rem(8px);
+      background: $blue_button;
+      border-radius: 50%;
+      left: rem(-23px);
+      top: rem(4px);
+      opacity: 0;
+      transition: opacity 2s;
+    }
+  }
+
+  .avto__links {
+    display: flex;
+    
+}
+    .avto__link {
+        
+      display: flex;
+      flex: 1;
+      justify-content: center;
+      align-items: center;
+      height: rem(45px);
+      background: $blue_button;
+      position: relative;
+      text-decoration: none;
+      color: #ffffff;
+      font-size: rem(16px);
+      border-right: rem(2px) solid #a7b8d1;
+     
+      &:nth-last-child(1) {
+        border-right: none;
+      }
+      &:hover {
+        background: darken($blue_button, 7%);
+      }
+    }
+  
+  
+    .signin__label{
+        display: flex;
+    }
