@@ -7,13 +7,17 @@ block content
     
     section.top_section.section.works_section
         include ../common/header.pug 
+        .header__scroll
+            a(href="#about__section")
+                svg.svg_white.arrow_down.icon
+                    use(xlink:href="assets/svg/sprite.svg#arrow_down")
     section.about__triangle_section
         .about__triangle_both
             svg.about__triangle.about__triangle_left.svg_biege(viewBox="0 0 1000 100" preservaspectratio="none")
                 polygon(points="0,0 0,100 500,100")
             svg.about__triangle.about__triangle_right.svg_white_triangle(viewBox="0 0 1000 100" preservaspectratio="none")
                 polygon(points="500,100 1000,0 1000,100")
-    section.section.about__section
+    section.section.about__section#about__section
         .about__left.about__part   
             .about__left_title.about__titles.main_title Обо мне
             .info.about__part_container
@@ -124,8 +128,11 @@ block content
 
         include ../common/footer.pug
 
-//- block scripts
-//- 	script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8D3sTkxvD9zcoQtr2fCyKSxfe6noB4no&callback=initMap" type="text/javascript")
+block scripts
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8D3sTkxvD9zcoQtr2fCyKSxfe6noB4no&callback=initMap" type="text/javascript")
+    script(src="./assets/js/bundle.js")
+	
+
 
                         
 

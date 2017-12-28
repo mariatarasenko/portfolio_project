@@ -1,5 +1,5 @@
 .reviews{
-   min-height:rem(1375px); 
+   min-height:rem(1470px); 
     height:100% ;
     background-image: url(../images/works/bg_works.png);
     background-repeat: no-repeat;
@@ -13,6 +13,10 @@
                          "left form right"
                          "left arrow right"
                          "footer footer footer";
+
+        @include mobile{
+            min-height:rem(1720px); 
+        }
 }
 
 .reviews__title{
@@ -38,7 +42,11 @@
 
 .reviews__items{
     grid-area: reviews;
-    display:inline-flex ;
+    display:flex ;
+
+    @include mobile{
+        flex-direction: column; 
+    }
 
 }
 .reviews_photo{
