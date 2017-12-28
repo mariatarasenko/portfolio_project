@@ -2,11 +2,28 @@
     grid-area: footer;
     display: flex;
     flex-direction: column;
+
+    @include tablets{
+       min-height: 23%;
+    } 
     
 }
 .footer_row{
     display: flex;
   
+    @include tablets{
+        flex-direction: column;
+    }
+}
+.footer__part{
+    
+}
+.footer__part_right{
+    flex:1;
+}
+.footer__part_left{
+    display: flex;
+    flex:2;
 }
 .footer__col{
     flex: 1;
@@ -44,6 +61,11 @@
 }
 .descr_content_text{
     padding-bottom: rem(9px);
+
+    @include tablets{
+    text-align: right;
+    padding-right: 15px;
+    }
 }
 
 .footer__descr{
@@ -51,6 +73,11 @@
     line-height: rem(24px);
     padding-left: rem(10px);
     padding-bottom: rem(15px);
+
+    @include tablets{
+        padding-top: rem(14px);
+        padding-bottom: rem(5px);
+    }
 }
 
 .footer__bottom_content{

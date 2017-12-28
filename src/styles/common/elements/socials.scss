@@ -1,5 +1,6 @@
 .socials__link   {
     color: currentColor;
+    padding:rem(35px) rem(14px) rem(15px) rem(14px);
 }
 
 .socials{
@@ -9,6 +10,16 @@
 .socials__item{
     
     display: inline-flex;
-    padding:rem(35px) rem(14px) rem(15px) rem(14px);
     
+    
+}
+
+.socials__icon{
+    color:#fff;
+
+    &:hover{
+        color:$dark_blue;
+        transition: color 2s;
+    } 
+
 }

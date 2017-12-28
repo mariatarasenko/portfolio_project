@@ -9,19 +9,29 @@
 
 .about__left_title{
     color:$black_title;
-    text-align: center;
+   // text-align: center;
     
     
 }
 
 .about__titles{
-    padding-bottom: rem(40px); 
+    padding-bottom: rem(40px);
+    padding-right: 10%;
+    text-align: center; 
+
+    @include tablets{
+        padding-top: 40px;
+        
+        
+    }
 }
 
 
 .about__left {
     background-color: $about_me;
-    
+    @include tablets{
+    padding-left: 10%;
+    }
     
 }
 
@@ -29,6 +39,13 @@
     display: flex;
     width: 100%;
     min-height: rem(1000px);
+
+    @include tablets{
+        flex-direction: column;
+        height: auto;
+     
+        
+ }
     
 }
 
@@ -52,6 +69,10 @@ justify-content:center ;
 
 .about__part {
     flex: 1;
+
+    @include tablets{
+        text-align: center;
+    }
 }
 
 .subtitle_left{
@@ -82,11 +103,18 @@ justify-content:center ;
 
 .contacts{
     width: rem(580px);
+    max-width: 60%;
     height: rem(293px);
+    
     background-color: rgba(255, 255, 255, 0.7);
     position: absolute;
     top: 25%;
     left: 25% ;
+
+    @include tablets{
+        left: 20% ; 
+        min-height: 40%; 
+    }
     
     
 }
@@ -98,6 +126,10 @@ justify-content:center ;
     display: flex;
     align-items: center;
     padding: rem(20px) 0; 
+    
+    @include tablets{
+        padding: rem(10px) 0;
+    }
 }
 
 .contacts__text{
@@ -108,15 +140,23 @@ justify-content:center ;
     display: flex;
     flex-direction: column;
     padding: rem(15px) rem(20px);
+
+    @include tablets{
+        padding: 0 rem(20px);
+    }
+
 }
 
 .contacts__list{
     display: flex;
+    @include tablets{
+        flex-direction: column;
+    }
 }
 
 .contacts__title{
     padding: rem(40px) 0;
 }
 .about__right{
-    margin-left: 50px;
+    margin-left:rem(50px);
 }

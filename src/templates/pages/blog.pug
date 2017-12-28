@@ -13,12 +13,20 @@ block content
                 .user__pic.circle__pic   
                 .main_title.blog__title Блог
                 p.blog__title_desc.blog_text_white Статьи , которые я написала
+    section.blog__triangle_section
+        .top_icon  
+            svg.triangle_blog.about__triangle_left.svg_white_bg(viewBox="0 0 1000 100" preservaspectratio="none")
+                polygon(points="0,0 0,100 500,100")
+            svg.triangle_blog.about__triangle_right.svg_white_bg(viewBox="0 0 1000 100" preservaspectratio="none")
+                polygon(points="500,100 1000,0 1000,100")
     section.blog__content
-        .top_icon    
-            svg.bg_icon.svg_white
-                use(xlink:href="assets/svg/sprite.svg#bg")
+        
+        //- .top_icon    
+        //-     svg.bg_icon.svg_white_bg
+        //-         use(xlink:href="assets/svg/sprite.svg#bg")
+
         aside.articles
-            ul.articles__list
+            ul.articles__list 
                 li.articles__item
                     a(href="#").blog_text.active Самое важное в SASS
                 li.articles__item.blog_text

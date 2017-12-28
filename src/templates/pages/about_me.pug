@@ -11,7 +11,7 @@ block content
         .about__triangle_both
             svg.about__triangle.about__triangle_left.svg_biege(viewBox="0 0 1000 100" preservaspectratio="none")
                 polygon(points="0,0 0,100 500,100")
-            svg.about__triangle.about__triangle_right.svg_white(viewBox="0 0 1000 100" preservaspectratio="none")
+            svg.about__triangle.about__triangle_right.svg_white_triangle(viewBox="0 0 1000 100" preservaspectratio="none")
                 polygon(points="500,100 1000,0 1000,100")
     section.section.about__section
         .about__left.about__part   
@@ -108,18 +108,18 @@ block content
                             li.contacts__item
                                 .contacts__icon
                                     svg.icon.svg_blue
-                                        use(xlink:href="assets/svg/sprite.svg#envelope2") 
+                                        use(xlink:href="assets/svg/sprite.svg#envelope_n") 
                                 .contacts__text.blog_text mariaatarasenko@gmail.com
                         .contacts__row
                             li.contacts__item
                                 .contacts__icon
                                     svg.icon.svg_blue
-                                        use(xlink:href="assets/svg/sprite.svg#phone") 
+                                        use(xlink:href="assets/svg/sprite.svg#phone_n") 
                                 .contacts__text.blog_text +48 503 243 304
                             li.contacts__item
                                 .contacts__icon
                                     svg.icon.svg_blue
-                                        use(xlink:href="assets/svg/sprite.svg#map_marker") 
+                                        use(xlink:href="assets/svg/sprite.svg#map_n") 
                                 .contacts__text.blog_text Варшава
 
         include ../common/footer.pug

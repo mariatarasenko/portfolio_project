@@ -17,7 +17,13 @@
 }
 
 .svg_white{
-    fill:#fff;
+    color:#fff;
+    opacity: 0.5;
+
+    &:hover{
+opacity: 1;
+transition: opacity 1s;
+    }
     
 }
 
@@ -36,6 +42,13 @@
 .svg_biege{
  fill:$about_me;
 }
+.svg_white_triangle{
+    fill:#fff;
+
+    @include tablets{
+        fill:$about_me;
+    } 
+}
 
 .svg_blue{
  color:$blue_button;
@@ -44,8 +57,12 @@
 .svg_gray{
     fill: #9fa1a1;
     position: absolute;
-     top: 14px;
-      left: 9px; 
-      width: 31px; 
-      height: 17px;
+     top: rem(14px);
+      left:rem(9px); 
+      width: rem(31px); 
+      height:rem(17px);
+}
+
+.svg_white_bg{
+    fill: #Fff;
 }
