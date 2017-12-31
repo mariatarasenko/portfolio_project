@@ -4,22 +4,67 @@ block variables
     - var title = 'My page'
 
 block content
-    section.section.top_section.wel_section
+    section.section.wel_section
         .wel_container 
+            video(autoplay width="110vw" height="100vh"    object-fit="fill").video_back 
+                source(src="assets/images/common/night.mp4")
+            img(src="assets/images/common/mountains.png", alt="1").mountains_back
+        
             .authorization
-                button(type="submit").button.button_transp.button_auto
+                button(type="submit").button.button_transp.button_auto.authorisation
                     span.button__text Авторизироваться 
-            .welcome
+            
             .welcome__content
-                include ../common/user.pug 
-                include ../common/socials.pug
-                ul.wel__menu.wel__row
-                    li.wel__menu_item
-                        a(href="my_works.html").wel__menu_link Мои работы
-                    li.wel__menu_item.wel__link_middle
-                        a(href="about_me.html").wel__menu_link Обо мне
-                    li.wel__menu_item
-                        a(href="blog.html").wel__menu_link Блог
+                .welcome__flip    
+                    .flip__front    
+                        include ../common/user.pug 
+                        include ../common/socials.pug
+                        ul.wel__menu.wel__row
+                            li.wel__menu_item
+                                a(href="my_works.html").wel__menu_link Мои работы
+                            li.wel__menu_item.wel__link_middle
+                                a(href="about_me.html").wel__menu_link Обо мне
+                            li.wel__menu_item
+                                a(href="blog.html").wel__menu_link Блог
+                    .avto__welcome.flip__back
+                        .sign_in
+                            .avto__title Авторизуйтесь
+                            form.avto_form
+                                .form__wrap
+                                    .label_container
+                                        .label_wrap
+                                            label.signin__label(for="login")
+                                                .label__icon.login
+                                                    svg.svg_gray
+                                                        use(xlink:href="assets/svg/sprite.svg#login")
+                                                input#email.label__input(name="login" placeholder="Логин")
+                                        .label_wrap
+                                            label.signin__label(for="password")
+                                                .label__icon.password
+                                                    svg.svg_gray
+                                                        use(xlink:href="assets/svg/sprite.svg#password")
+                                                input#password.label__input(name="password" placeholder="Пароль")
+                                    .signin__buttons
+                                        .signin__checkbox
+                                            input#robot__check.robot__check(type="checkbox" name="robot-check")
+                                            label.check__label(for="robot__check") Я человек
+                                                svg.check__label_icon
+                                                    use(xlink:href="./images/sprite/mySprite.min.svg#check")
+                                        .signin__radio
+                                            .robot__quest Вы точно не робот?
+                                            .robot__radio
+                                                input#yes.robot__radio_tag(name="anwsr" type="radio")
+                                                label.radio__label(for="yes") Да
+                                            .robot__radio
+                                                input#not-sure.robot__radio_tag(name="anwsr" type="radio")
+                                                label.radio__label(for="not-sure") Не уверен
+                            .avto__links
+                                .avto__link.wel__menu_item
+                                    a.avto__link_one(href="main.html")
+                                    .avto__link_descr На главную
+                                .avto__link.wel__menu_item
+                                    a.avto__link_one(href="main.html")
+                                    .avto__link_descr Войти
             .welcome__footer
                 .welcome__descr
                     p.descr_content © Мария Тарасенко | создано с любовью в LoftSchool | 2017

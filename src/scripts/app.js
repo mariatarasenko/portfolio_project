@@ -1,4 +1,10 @@
+(function(){
+    const authoBtn = document.querySelectorAll('.authorisation');
+    const flipBox = document.querySelector('.welcome__flip');
 
-const ect = 1;
-
-document.write(ect);
+    authoBtn.forEach(btn => {
+        btn.addEventListener('click',()=>{
+            flipBox.classList.toggle('flip');
+    },false);
+});
+})();

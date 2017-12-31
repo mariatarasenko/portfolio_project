@@ -73,16 +73,34 @@ background-image: url(../images/works/Dmitriy.jpg)
 .reviews__autor{
     padding-top: rem(29px);
 }
+.form__contents{
+    filter:blur(0px);
 
+    
+}
 .form_block{
+    background-image: url(../images/works/bg_works.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     margin-left: 25%;
     margin-top: rem(55px);
     grid-area:form;   
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: rgba(255, 254, 254, 0.085); 
+    //background: rgba(255, 254, 254, 0.085);
+    max-width: 100%; 
     width: rem(384px);
+    filter: blur(1px);
+    &:only-child{
+        filter: blur(0px);
+    }
+    &:hover{
+        filter: blur(0px);
+    }
+
+
     
 }
 
