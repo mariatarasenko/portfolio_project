@@ -18,11 +18,12 @@ block content
             svg.about__triangle.about__triangle_right.svg_white_triangle(viewBox="0 0 1000 100" preservaspectratio="none")
                 polygon(points="500,100 1000,0 1000,100")
     section.section.about__section#about__section
-        .about__left.about__part   
-            .about__left_title.about__titles.main_title Обо мне
-            .info.about__part_container
+        .about__left.about__part 
+            .about__part_container.info  
+                .about__left_title.about__titles.main_title Обо мне
+                
                 .info__photo
-                     .info__photo_avatar 
+                    img(src="assets/images/common/user.jpg", alt="photo").info__photo_jpg 
                 .info__descr
                     .info__descr_title
                         .subtitle.subtitle_left Кто я
@@ -30,6 +31,7 @@ block content
                         p.blog_text.about_text Я веб разработчик из Варшавы. Мне 20 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
                         p.blog_text.about_text Этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
         .about__right.about__part
+            .about__part_container
             
                 .about__right_title.about__titles
                     .subtitle.right_title Чем я могу быть вам полезна
@@ -129,8 +131,9 @@ block content
         include ../common/footer.pug
 
 block scripts
-    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8D3sTkxvD9zcoQtr2fCyKSxfe6noB4no&callback=initMap" type="text/javascript")
+    
     script(src="./assets/js/bundle.js")
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8D3sTkxvD9zcoQtr2fCyKSxfe6noB4no&callback=initMap" type="text/javascript")
 	
 
 

@@ -107,27 +107,28 @@ block content
                     span.reviews__text_content Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
                 .reviews__autor
                     p.reviews__text_content <strong>Сабанцев Владимир</strong> <br> — преподаватель
-        
-        form(action="#", method="post").form_block
-            //- .form__contents
-            .form__title.subtitle Связаться со мной 
-            .form__row
-                label(for='name')
-                    span.form_title 
-                    input#name.form__content.form__text(type='text', placeholder='Ваше имя' name='name')
-            .form__row
-                label(for='email')
-                    span.form_title 
-                    input#name.form__content.form__text(type='text', placeholder='Ваш email' name='email')
-            .form__row
-                label(for='comment')
-                    span.form_title 
-                    textarea.form__content.form__coment.form__text(name="comment", placeholder='Ваше сообщение', cols="30", rows="10" )
-            .form__buttons_row
-                button(type="submit").button__form.blue__button
-                    span.button__text Отправить 
-                button(type="reset").button__form.button_transp
-                    span.button__text Очистить
+        .form_block
+            .form_image
+            form(action="#", method="post").form_questions
+                //- .form__contents
+                .form__title.subtitle Связаться со мной 
+                .form__row
+                    label(for='name')
+                        span.form_title 
+                        input#name.form__content.form__text(type='text', placeholder='Ваше имя' name='name')
+                .form__row
+                    label(for='email')
+                        span.form_title 
+                        input#name.form__content.form__text(type='text', placeholder='Ваш email' name='email')
+                .form__row
+                    label(for='comment')
+                        span.form_title 
+                        textarea.form__content.form__coment.form__text(name="comment", placeholder='Ваше сообщение', cols="30", rows="10" )
+                .form__buttons_row
+                    button(type="submit").button__form.blue__button
+                        span.button__text Отправить 
+                    button(type="reset").button__form.button_transp
+                        span.button__text Очистить
         .arrow_up    
             a(href="#works_section")
                 svg.icon.svg_white

@@ -78,11 +78,24 @@ background-image: url(../images/works/Dmitriy.jpg)
 
     
 }
-.form_block{
+.form_image{
+    position: absolute;
+    top: 0;
+    left: 0;
     background-image: url(../images/works/bg_works.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    filter: blur(1px);
+}
+
+.form_questions{
+    position: absolute;
+    top: 0;
+    left: 0;  
+}
+.form_block{
+    position: relative;
     margin-left: 25%;
     margin-top: rem(55px);
     grid-area:form;   
@@ -92,17 +105,7 @@ background-image: url(../images/works/Dmitriy.jpg)
     //background: rgba(255, 254, 254, 0.085);
     max-width: 100%; 
     width: rem(384px);
-    filter: blur(1px);
-    &:only-child{
-        filter: blur(0px);
-    }
-    &:hover{
-        filter: blur(0px);
-    }
-
-
-    
-}
+  }
 
 
 .form__row{

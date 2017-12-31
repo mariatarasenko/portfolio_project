@@ -10,9 +10,21 @@
     background-repeat: no-repeat;
     
 }
+
+.user__circle{
+    width: rem(141px);
+    height: rem(141px);
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.user__circle_img{
+    width: 100%;
+ 
+}
 .user__pic{
     
-    background-image: url(../images/common/user.jpg);
+    //background-image: url(../images/common/user.jpg);
     margin-top: rem(40px);
 }
 
@@ -43,3 +55,4 @@ margin-top:rem(10px);
     position: absolute;
     left: 42%;
 }
+
