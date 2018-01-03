@@ -1,0 +1,157 @@
+.reviews{
+   min-height:rem(1470px); 
+    height:100% ;
+    background-image: url(../images/works/bg_works.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 2fr 3fr 4fr 1fr 2fr;
+    grid-template-areas: "left title right "
+                         "left reviews right"
+                         "left form right"
+                         "left arrow right"
+                         "footer footer footer";
+
+        @include mobile{
+            min-height:rem(1720px); 
+        }
+}
+
+.reviews__title{
+    padding-top: rem(20px);
+    position: relative;
+    grid-area:title; 
+    display: flex;
+    justify-content: center;
+}
+
+.arrow_up {
+    grid-area:arrow;  
+}
+
+.reviews__title_text{
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    width: rem(350px);
+    line-height: rem(66px);
+    text-align: center;
+}
+
+.reviews__items{
+    grid-area: reviews;
+    display:flex ;
+
+    @include mobile{
+        flex-direction: column; 
+    }
+
+}
+.reviews_photo{
+    margin: 0 auto;
+    margin-bottom: rem(25px);
+}
+.reviews_photo_right{
+background-image: url(../images/works/Dmitriy.jpg)
+}
+
+.reviews_photo_left{
+    background-image: url(../images/works/Vladimir.jpg)
+}
+
+.reviews__items_one{
+    text-align:center;
+     
+}
+.reviews__text_content{
+    font-family: 'robotoitalic';
+   
+}
+
+.reviews__autor{
+    padding-top: rem(29px);
+}
+.form__contents{
+    filter:blur(0px);
+
+    
+}
+.form_image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(../images/works/bg_works.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(1px);
+}
+
+.form_questions{
+    position: absolute;
+    top: 0;
+    left: 0;  
+}
+.form_block{
+    position: relative;
+    margin-left: 25%;
+    margin-top: rem(55px);
+    grid-area:form;   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    //background: rgba(255, 254, 254, 0.085);
+    max-width: 100%; 
+    width: rem(384px);
+  }
+
+
+.form__row{
+    flex:1;
+    margin-bottom: rem(25px);
+}
+.form__content{
+    width: rem(343px);
+    height: rem(48px);
+    background-color:rgba(248, 248, 248, 0.192);
+    border: none;
+
+
+}
+.form__content:active{
+    border: none;
+}
+
+.form__text{
+    
+    font-family: Roboto;
+    font-size: rem(16px);
+   
+}
+.form__title{
+    color:#fff;
+    margin-top: rem(32px);
+    margin-bottom: rem(44px)
+}
+.form__coment{
+    
+    height: rem(133px);
+}
+
+.button__form{
+    flex: 1;
+    padding: rem(15px) 0;
+    border: none;
+}
+.form__buttons_row{
+    width: 100%;
+    display: flex;
+}
+.arrow_up{
+    padding: rem(20px) 0;
+    display: flex;
+    justify-content: center;
+}
+

@@ -5,79 +5,138 @@ block variables
 
 block content
     
-    section.section.about
-        .about__left   
-            .about__left_title.main_title About me
-            .info
+    section.top_section.section.works_section
+        include ../common/header.pug 
+        .header__scroll
+            a(href="#about__section")
+                svg.svg_white.arrow_down.icon
+                    use(xlink:href="assets/svg/sprite.svg#arrow_down")
+    section.about__triangle_section
+        .about__triangle_both
+            svg.about__triangle.about__triangle_left.svg_biege(viewBox="0 0 1000 100" preservaspectratio="none")
+                polygon(points="0,0 0,100 500,100")
+            svg.about__triangle.about__triangle_right.svg_white_triangle(viewBox="0 0 1000 100" preservaspectratio="none")
+                polygon(points="500,100 1000,0 1000,100")
+    section.section.about__section#about__section
+        .about__left.about__part 
+            .about__part_container.info  
+                .about__left_title.about__titles.main_title Обо мне
+                
                 .info__photo
-                    img(src="", alt="").info__photo_avatar
+                    img(src="assets/images/common/user.jpg", alt="photo").info__photo_jpg 
                 .info__descr
                     .info__descr_title
-                        .subtitle Кто я
+                        .subtitle.subtitle_left Кто я
                     .info__descr_text.descr_content
-                        p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
-                        p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!
-        .about__right
-            .about__right_title
-                .subtitle Чем я могу быть вам полезен
-            .about__right_descr.descr_content
-                p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
-            .about__right_skills
-                ul.skills__list
-                    li.skills__list_item
-                        .skills__row
-                            .skills__row_title Frontend
-                            ul.skills__row_list
-                                each skill in ['Html5', 'Css3', 'JavaScript']
-                                    li.skills__row_item
-                                        .skill
-                                            svg.skill__circle
-                                            .skill__title #{skill}
-                            .skills__row_title Backend
-                            ul.skills__row_list
-                                each skill in ['PHP', 'MySql', 'Node.js','npm']
-                                    li.skills__row_item
-                                        .skill
-                                            svg.skill__circle
-                                            .skill__title #{skill}
-                            .skills__row_title Workflow
-                            ul.skills__row_list
-                                each skill in ['Git', 'Gulp', 'Bower']
-                                    li.skills__row_item
-                                        .skill
-                                            svg.skill__circle
-                                            .skill__title #{skill}
-    section.section.map
+                        p.blog_text.about_text Я веб разработчик из Варшавы. Мне 20 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                        p.blog_text.about_text Этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+        .about__right.about__part
+            .about__part_container
+            
+                .about__right_title.about__titles
+                    .subtitle.right_title Чем я могу быть вам полезна
+                .about__right_descr.descr_content
+                    p.blog_text Больше всего меня привлекает Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+                .about__right_skills
+                    .skills__list
+                        .skills__wrap
+                            .skills__title Frontend
+                                ul.skills__row_list
+                                    li.skills__item
+                                        svg.skills__circles(viewBox="0 0 110 110")
+                                            circle(class="circle__back" r="45" cx="50%" cy="50%" fill="none")
+                                            circle(class=`circle__front circle-90` r="45" cx="50%" cy="50%" fill="none" transform="rotate(-90 55 55)")
+                                        span.skills__row_item HTML
+                                    li.skills__item
+                                        svg.skills__circles(viewBox="0 0 110 110")
+                                            circle(class="circle__back" r="45" cx="50%" cy="50%" fill="none")
+                                            circle(class=`circle__front circle-80` r="45" cx="50%" cy="50%" fill="none" transform="rotate(-90 55 55)")
+                                        span.skills__row_item CSS3
+                                    li.skills__item
+                                        svg.skills__circles(viewBox="0 0 110 110")
+                                            circle(class="circle__back" r="45" cx="50%" cy="50%" fill="none")
+                                            circle(class=`circle__front circle-70` r="45" cx="50%" cy="50%" fill="none" transform="rotate(-90 55 55)")
+                                        span.skills__row_item JavaScript &amp; jQuery
+                        .skills__wrap
+                            .skills__title Backend
+                                ul.skills__row_list
+                                    li.skills__item
+                                        svg.skills__circles(viewBox="0 0 110 110")
+                                            circle(class="circle__back" r="45" cx="50%" cy="50%" fill="none")
+                                            circle(class=`circle__front circle-70` r="45" cx="50%" cy="50%" fill="none" transform="rotate(-90 55 55)")
+                                        span.skills__row_item PHP
+                                    li.skills__item
+                                        svg.skills__circles(viewBox="0 0 110 110")
+                                            circle(class="circle__back" r="45" cx="50%" cy="50%" fill="none")
+                                            circle(class=`circle__front circle-40` r="45" cx="50%" cy="50%" fill="none" transform="rotate(-90 55 55)")
+                                        span.skills__row_item mySQL
+                                    li.skills__item
+                                        svg.skills__circles(viewBox="0 0 110 110")
+                                            circle(class="circle__back" r="45" cx="50%" cy="50%" fill="none")
+                                            circle(class=`circle__front circle-50` r="45" cx="50%" cy="50%" fill="none" transform="rotate(-90 55 55)")
+                                        span.skills__row_item  Node.js &amp; npm
+                                    li.skills__item
+                                        svg.skills__circles(viewBox="0 0 110 110")
+                                            circle(class="circle__back" r="45" cx="50%" cy="50%" fill="none")
+                                            circle(class=`circle__front circle-30` r="45" cx="50%" cy="50%" fill="none" transform="rotate(-90 55 55)")
+                                        span.skills__row_item Mongo.db
+                        .skills__wrap
+                            .skills__title Workflow
+                                ul.skills__row_list
+                                    li.skills__item
+                                        svg.skills__circles(viewBox="0 0 110 110")
+                                            circle(class="circle__back" r="45" cx="50%" cy="50%" fill="none")
+                                            circle(class=`circle__front circle-80` r="45" cx="50%" cy="50%" fill="none" transform="rotate(-90 55 55)")
+                                        span.skills__row_item Gulp
+                                    li.skills__item
+                                        svg.skills__circles(viewBox="0 0 110 110")
+                                            circle(class="circle__back" r="45" cx="50%" cy="50%" fill="none")
+                                            circle(class=`circle__front circle-60` r="45" cx="50%" cy="50%" fill="none" transform="rotate(-90 55 55)")
+                                        span.skills__row_item Webpack
+                                    li.skills__item
+                                        svg.skills__circles(viewBox="0 0 110 110")
+                                            circle(class="circle__back" r="45" cx="50%" cy="50%" fill="none")
+                                            circle(class=`circle__front circle-80` r="45" cx="50%" cy="50%" fill="none" transform="rotate(-90 55 55)")
+                                        span.skills__row_item Git
+    section.section.map_section
         #map
-        .map__contacts
-            .contacts
-                .contacts__title
-                    .subtitle Контакты
-                ul.contacts__list
-                    .contacts__row
-                        li.contacts__item
-                            .contacts__icon
-                                svg.icon
-                                    use(xlink:href="assets/svg/sprite.svg#skype") 
-                            .contacts__text matarasenko
-                        li.contacts__item
-                            .contacts__icon
-                                svg.icon
-                                    use(xlink:href="assets/svg/sprite.svg#envelope2") 
-                            .contacts__text mariaatarasenko@gmail.com
-                    .contacts__row
-                        li.contacts__item
-                            .contacts__icon
-                                svg.icon
-                                    use(xlink:href="assets/svg/sprite.svg#phone") 
-                            .contacts__text +48 503 243 304
-                        li.contacts__item
-                            .contacts__icon
-                                svg.icon
-                                    use(xlink:href="assets/svg/sprite.svg#map_marker") 
-                            .contacts__text Варшава
+            .map__contacts
+                .contacts
+                    .contacts__title
+                        .subtitle Контакты
+                    ul.contacts__list
+                        .contacts__row
+                            li.contacts__item
+                                .contacts__icon
+                                    svg.icon.svg_blue
+                                        use(xlink:href="assets/svg/sprite.svg#skype") 
+                                .contacts__text.blog_text matarasenko
+                            li.contacts__item
+                                .contacts__icon
+                                    svg.icon.svg_blue
+                                        use(xlink:href="assets/svg/sprite.svg#envelope_n") 
+                                .contacts__text.blog_text mariaatarasenko@gmail.com
+                        .contacts__row
+                            li.contacts__item
+                                .contacts__icon
+                                    svg.icon.svg_blue
+                                        use(xlink:href="assets/svg/sprite.svg#phone_n") 
+                                .contacts__text.blog_text +48 503 243 304
+                            li.contacts__item
+                                .contacts__icon
+                                    svg.icon.svg_blue
+                                        use(xlink:href="assets/svg/sprite.svg#map_n") 
+                                .contacts__text.blog_text Варшава
 
         include ../common/footer.pug
+
+block scripts
+    
+    script(src="./assets/js/bundle.js")
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8D3sTkxvD9zcoQtr2fCyKSxfe6noB4no&callback=initMap" type="text/javascript")
+	
+
+
                         
 
                     

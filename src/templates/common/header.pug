@@ -1,15 +1,14 @@
-section.section.header
-        .header__socials
-            ul.socials
-                each item in [`vk`,`fb`,`in`]
-                    li.socials__item
-                        a(href="#" class=`socials__links social__links_${item}`)
-        .header__title
-            .section__tytle
-                img(src="", alt="stars").section__tytle_pic
+.header__socials
+    include socials.pug
+.header__menu   
+    .hamburger
+        .hamburger__top
+        .hamburger__middle
+        .hamburger__bottom
+.header__title.works__user
+    .stars1_img.user_icon
+        //- svg.user_icon.svg_white_transp
+        //-     use(xlink:href="assets/svg/sprite.svg#stars1")            
+        .header__user
             include user.pug
-                .hamburger.header__menu
-                    .hamburger__top
-                    .hamburger__middle
-                    .hamburger__bottom
-                .arrow_down.header__scroll
+            

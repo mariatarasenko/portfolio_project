@@ -4,41 +4,48 @@ block variables
     - var title = 'Authorization'
 
 block content
-    .welcome
-        .white_title.main_title Авторизуйтесь
-            form(action="#", method="post").form_block 
-                .form__row
-                    svg.icon
-                        use(xlink:href="assets/svg/sprite.svg#login")
-                    label(for='login')
-                        span.form_title Логин
-                        input#name.form-control(type='text', placeholder='first and last' name='login')
-                .form__row
-                    label(for='password')
-                        svg.icon
-                            use(xlink:href="assets/svg/sprite.svg#password")
-                        span.form_title Пароль
-                        input#name.form-control(type='text', placeholder='first and last' name='password')
-                .check_button
-                    label(for="human")
-                    input#name.human(type="checkbox")
-                    span.form_tytle.check_title Я человек
-                .check_title Вы точно не робот?
-                .radio_row    
-                    .radio_buttons
-                        label(for="yes")
-                        span.form_tytle.check_title Да
-                        input#name.yes(type="radio")
-                    .radio_buttons
-                        label(for="no")
-                        span.form_tytle.check_title Не уверен
-                        input#name.yes(type="radio")
-            .avto__links
-                .avto__link
-                    a(href="#") На главную
-                .avto__link
-                    a(href="#") Войти                   
+    section.section.top_section.avto_section.wel_container
+        .welcome
+            .avto__welcome
+                .sign_in
+                    .avto__title Авторизуйтесь
+                    form.avto_form
+                        .form__wrap
+                            .label_container
+                                .label_wrap
+                                    label.signin__label(for="login")
+                                        .label__icon.login
+                                            svg.svg_gray
+                                                use(xlink:href="assets/svg/sprite.svg#login")
+                                        input#email.label__input(name="login" placeholder="Логин")
+                                .label_wrap
+                                    label.signin__label(for="password")
+                                        .label__icon.password
+                                            svg.svg_gray
+                                                use(xlink:href="assets/svg/sprite.svg#password")
+                                        input#password.label__input(name="password" placeholder="Пароль")
+                            .signin__buttons
+                                .signin__checkbox
+                                    input#robot__check.robot__check(type="checkbox" name="robot-check")
+                                    label.check__label(for="robot__check") Я человек
+                                        svg.check__label_icon
+                                            use(xlink:href="./images/sprite/mySprite.min.svg#check")
+                                .signin__radio
+                                    .robot__quest Вы точно не робот?
+                                    .robot__radio
+                                        input#yes.robot__radio_tag(name="anwsr" type="radio")
+                                        label.radio__label(for="yes") Да
+                                    .robot__radio
+                                        input#not-sure.robot__radio_tag(name="anwsr" type="radio")
+                                        label.radio__label(for="not-sure") Не уверен
+                    .avto__links
+                        .avto__link.wel__menu_item
+                            a.avto__link_one(href="main.html")
+                            .avto__link_descr На главную
+                        .avto__link.wel__menu_item
+                            a.avto__link_one(href="main.html")
+                            .avto__link_descr Войти
     .welcome__footer
         .welcome__descr.descr_content
-            p jefiorfhwgrtwfjghoirjfvbhgrlfidheoihioedwhqewdo
+            p © Мария Тарасенко | создано с любовью в LoftSchool | 2017
             

@@ -1,0 +1,58 @@
+.user{
+    min-height: 69%;
+}
+
+.circle__pic{
+    width: rem(141px);
+    height: rem(141px);
+    border-radius: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+.user__circle{
+    width: rem(141px);
+    height: rem(141px);
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.user__circle_img{
+    width: 100%;
+ 
+}
+.user__pic{
+    
+    //background-image: url(../images/common/user.jpg);
+    margin-top: rem(40px);
+}
+
+.user__info{
+margin-top:rem(10px);
+}
+
+.user__name{
+    font-size: rem(28px);
+    font-weight: 500;
+    line-height: rem(34px);
+}
+
+.user__desc{
+    margin-top:rem(5px);
+   // opacity: 0.8 ;
+}
+
+
+
+.user__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.blog__title_content{
+    position: absolute;
+    left: 42%;
+}
+

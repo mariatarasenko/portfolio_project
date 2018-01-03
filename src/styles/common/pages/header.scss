@@ -1,0 +1,166 @@
+.user_icon{
+  width: 100%; 
+  min-height: rem(260px);
+  
+}
+
+.header__user{
+  opacity: 1;
+}
+
+.header__menu_blog{
+  display:flex;
+  justify-content: flex-end;
+  margin-top:rem(20px);
+  margin-right:rem(50px);
+}
+.hamburger{
+    position: relative;
+    height: 28px;
+    width: 36px;
+    cursor: pointer;
+
+}
+.hamburger__top,
+.hamburger__middle,
+.hamburger__bottom {
+  position: absolute;
+  display: block;
+  height: 4px;
+  width: 36px;
+  border-radius: 2px;
+  background: #fff;
+  
+}
+.hamburger__top {
+    top: 0;
+    transform-origin: 34px 2px;
+  }
+  
+  .hamburger__middle{
+    top: 12px;
+    transition: opacity 200ms linear;
+  }
+  
+  .hamburger__bottom {
+    bottom: 0;
+    transform-origin: 34px 2px;
+  }
+  
+
+
+    
+
+    .is-open.hamburger__top {
+      animation: line-top-out 600ms linear normal;
+      animation-fill-mode: forwards;
+    }
+    .is-open.hamburger__middle {
+      opacity: 0;
+    }
+    .is-open.hamburger__bottom {
+      animation: line-bot-out 600ms linear normal;
+      animation-fill-mode: forwards;
+    }
+
+  
+ 
+        .is-closed.hamburger__top {
+      animation: line-top-in 600ms linear normal;
+      animation-fill-mode: forwards;
+    }
+    .is-closed.hamburger__middle {
+      transition-delay: 200ms;
+    }
+    .is-closed.hamburger__bottom {
+      animation: line-bot-in 600ms linear normal;
+      animation-fill-mode: forwards;
+    }
+  
+
+
+@keyframes line-top-in {
+  0% {
+    left: -5px;
+    bot: 0;
+    transform: rotate(-45deg);
+  }
+  20% {
+    left: -5px;
+    bot: 0;
+    transform: rotate(-60deg);
+  }
+  80% {
+    left: 0;
+    bot: 0;
+    transform: rotate(15deg);
+  }
+  100% {
+    left: 0;
+    bot: 1px;
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes line-top-out {
+  0% {
+    left: 0;
+    top: 0;
+    transform: rotate(0deg);
+  }
+  20% {
+    left: 0;
+    top: 0;
+    transform: rotate(15deg);
+  }
+  80% {
+    left: -5px;
+    top: 0;
+    transform: rotate(-60deg);
+  }
+  100% {
+    left: -5px;
+    top: 1px;
+    transform: rotate(-45deg);
+  }
+}
+
+@keyframes line-bot-in {
+  0% {
+    left: -5px;
+    transform: rotate(45deg);
+  }
+  20% {
+    left: -5px;
+    bot: 0;
+    transform: rotate(60deg);
+  }
+  80% {
+    left: 0;
+    bot: 0;
+    transform: rotate(-15deg);
+  }
+  100% {
+    left: 0;
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes line-bot-out {
+  0% {
+    left: 0;
+    transform: rotate(0deg);
+  }
+  20% {
+    left: 0;
+    transform: rotate(-15deg);
+  }
+  80% {
+    left: -5px;
+    transform: rotate(60deg);
+  }
+  100% {
+    left: -5px;
+    transform: rotate(45deg);
+  }
+}

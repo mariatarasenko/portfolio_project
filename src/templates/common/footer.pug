@@ -1,38 +1,47 @@
 footer.footer
-            .footer_row
-                .container
-                    .footer__col.footer__col_right
-                        .footer__descr.descr_content
-                            p jefiorfhwgrtwfjghoirjfvbhgrlidheoihioedwhqewdo
-                    .footer__col.footer__col_middle
-                        nav.menu
-                            ul.menu__list
-                                each item in ['мои работы','обо мне','блог','авторизация']
-                                    li.menu__item
-                                        a(href="#").menu__link #{item}
-                    .footer__col.footer__col_left
+            .footer_row.footer__top
+                
+                    .footer__part.footer__part_right
+                        .footer__descr.descr_content.footer__descr_right
+                            p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. 
+                    .footer__part.footer__part_left
+                        .footer__col.footer__col_middle
+                            nav.menu
+                                ul.menu__list.footer__descr
+                                    //- each item in ['Мои работы','Обо мне','Блог','Aвторизация']
+                                    //-     li.descr_content_text.menu__item
+                                    //-         a(href="#").menu__link #{item}
+                                    li.descr_content_text.menu__item
+                                        a(href="my_works.html").menu__link Мои работы 
+                                    li.descr_content_text.menu__item
+                                        a(href="about_me.html").menu__link Обо мне 
+                                    li.descr_content_text.menu__item
+                                        a(href="blog.html").menu__link Блог
+                                    li.descr_content_text.menu__item
+                                        a(href="authorization.html").menu__link Aвторизация 
+                            ul.my_contacts
+                                li.my_contacts__icons
+                                    a(href="https://vk.com/miss_smile1").my_contacts__link
+                                        svg.icon_footer.icon.socials__icon
+                                            use(xlink:href="assets/svg/sprite.svg#vk")
+                                li.my_contacts__icons 
+                                    a(href="https://github.com/mariatarasenko").my_contacts__link
+                                        svg.icon_footer.icon.socials__icon
+                                            use(xlink:href="assets/svg/sprite.svg#github")
+                                li.my_contacts__icons 
+                                    a(href="https://www.linkedin.com/in/maria-tarasenko-a4571914a/").my_contacts__link
+                                        svg.icon_footer.icon.socials__icon
+                                            use(xlink:href="assets/svg/sprite.svg#in")
+                        .footer__col.footer__col_left
+                        
+                            
+                            .footer__descr
+                                p.descr_content_text matarasenko
+                                p.descr_content_text mariaatarasenko@gmail.com
+                                p.descr_content_text +7 999 344 33 34
+                                p.descr_content_text Варшава
+                        
                        
-            .footer__row
-                .container_bottom
-                    .footer__col.footer__col_right ul.my_contacts
-                        ul.my_contacts
-                            li.my_contacts__icons
-                                a(href="#")
-                                    svg.icon
-                                        use(xlink:href="assets/svg/sprite.svg#portf_arrow_up")
-                            li.my_contacts__icons 
-                                a(href="#")
-                                    svg.icon
-                                        use(xlink:href="assets/svg/sprite.svg#github")
-                            li.my_contacts__icons 
-                                a(href="#")
-                                    svg.icon
-                                        use(xlink:href="assets/svg/sprite.svg#in")
-                        .footer__descr.descr_content
-                            p jefiorfhwgrtwfjghoirjfvbhgrlfidheoihioedwhqewdo
-                    .footer__col.footer__col_middle
-                        .footer__descr.descr_content
-                            p jefiorfhwgrtwfjghoirjfvbhgrlfidheoihioedwhqewdo
-                    .footer__col.footer__col_left
-                        .footer__descr.descr_content
-                            p jefiorfhwgrtwfjghoirjfvbhgrlfidheoihioedwhqewdo
+            .footer_row.footer__bottom
+                .footer__bottom_content © Тарасенко Мария | Создано с любовью в LoftSchool | 2017
+                    

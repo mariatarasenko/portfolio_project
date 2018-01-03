@@ -1,0 +1,214 @@
+.works_section{
+    width: 100%;
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 4fr 2fr 1fr;
+    grid-template-areas: "icons top burger "
+                         "left user right"
+                         "left scroll right"
+                         "bot_part bot_part bot_part";
+
+}
+
+.header__socials{
+    grid-area: icons;
+}
+
+.header__menu{
+    grid-area: burger;
+    display:flex ;
+    justify-content: flex-end;
+    padding-right:rem(20px);
+    padding-top: rem(35px);
+
+}
+
+.works__user{
+    grid-area: user;
+    position: relative;
+}
+
+.header__scroll{
+    grid-area: scroll;
+   z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.header__user{
+   
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    
+}
+.slider__title_bg{
+    grid-area: bot_part  ;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top:rem(-170px) ;
+}
+
+.bg_icon_works{
+    flex:1;
+}
+
+.slider__title_order{
+
+   position:relative;  
+   width: 100vw;
+   height:100% ;
+   background-color: rgba($gray_footer_lighter,0.5);
+   padding: 0;
+   display: flex;
+   justify-content: center;
+   flex: 1;
+
+}
+.works__title{
+    position: absolute;
+    top:20%;
+}
+.slider_section{
+}
+.slider__item{
+ display: none;
+
+}
+.slider__item_active{
+  width:100%;
+  height:100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows:  2fr 1fr ;
+  grid-template-areas: 
+                       "descr picture "
+                       "descr btn ";
+
+ @include tablets{
+    grid-template-columns: 1fr ;
+    grid-template-rows:  3fr 2fr 2fr ;
+    grid-template-areas: "picture "
+                         "descr  "
+                         "btn";
+ }
+
+        
+}
+.slider__info{
+    grid-area:descr;
+    display: flex;
+    flex-direction: column;
+    align-items:center ;
+    justify-content: center;
+    min-height: 150px;
+    
+}
+.slider_display{
+    grid-area: picture;
+    
+}
+.slider__btns{
+    grid-area: btn;
+    
+    display: flex;
+}
+.slider__btns_down{
+ flex:1;
+}
+.slider__btns_up{
+    flex:1; 
+}
+
+.slider__btns_one{
+    height:100% ;
+   
+}
+
+.btn_img_yoga{
+    max-height:rem(230px);
+    width: 100%;
+    background-image: url(../images/works/works_yoga.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.btn_img_school{
+    max-height:rem(230px);
+    width: 100%;
+    background-image: url(../images/works/works_school.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.btn_img_bus{
+    max-height:rem(230px);
+    width: 100%;
+    background-image: url(../images/works/works_bus.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.svg_slider{
+    background-color: #000;
+    opacity: 0.4;
+    height:100% ;
+}
+
+.slider__main_img{
+    margin-top: rem(10px);
+}
+
+.works__list_techn{
+    font-family: 'robotobold';
+    color: $dark_blue;
+    text-transform: uppercase;
+    padding-bottom:rem(58px);
+    
+    @include tablets{
+        padding-bottom:rem(18px);
+    }
+}
+
+.blue__button{
+    background-color: #004cd1; 
+}
+.works__button{
+    width: rem(201px);
+    height:rem(45px);
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    background-color:$blue_button;  
+        &:hover{
+            background-color:$blue_button_hover; 
+            transition: background-color 1s;
+        }
+}
+
+.works__button_link{
+   color:#fff;
+   padding-left:rem(10px);
+   
+
+}
+
+.works__list_title{
+    padding-bottom:rem(58px);   
+
+    @include tablets{
+        padding-bottom:rem(18px);
+    }
+}
+
+.slider{
+    width: 100%;
+    height: 100%;
+}
+
+.triangle_works{
+    position:absolute;
+    bottom:100%;
+}

@@ -1,0 +1,162 @@
+.footer{
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    @include tablets{
+       //min-height: 23%;
+    } 
+    
+}
+.footer_row{
+    display: flex;
+  
+    @include tablets{
+        flex-direction: column;
+    }
+}
+.footer__part{
+    
+}
+.footer__part_right{
+    flex:1;
+
+    @include tablets{
+        &::after{
+            content: '';
+            position: absolute;
+            width: 80%;
+            height: .1875rem;
+            background: #63666f;
+            left: 50%;
+            transform: translate(-50%);
+            
+            }
+    }
+}
+.footer__part_left{
+    display: flex;
+    flex:2;
+    
+    @include mobile{
+        flex-direction: column;
+    }
+}
+.footer__col{
+    flex: 1;
+}
+.my_contacts{
+    display: inline-flex;
+    width: 100%;
+    padding-left: rem(9px);
+
+    @include mobile{
+        padding-left: 35%;
+        padding-bottom: rem(10px);
+    }
+}
+
+.footer__top{
+    background-color:rgba($gray_footer_lighter,0.9);
+}
+.footer__bottom{
+    background-color:rgba($dark_blue,0.9); 
+    
+}
+
+.my_contacts__icons{
+    width: rem(50px);
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+.menu__link{
+    color: #fff;
+    padding: 0 rem(9px);
+
+    @include mobile{
+        padding: 0 ;
+    }
+
+}
+
+.menu__list{
+    padding: rem(20px) 0;
+}
+.descr_content_text{
+    padding-bottom: rem(9px);
+
+    @include tablets{
+    text-align: right;
+    padding-right: 15px;
+    }
+
+    @include mobile{
+        text-align: center;
+    padding-right: 0;
+    padding-bottom: rem(2px);
+
+    }
+}
+
+.footer__descr{
+    padding-top: rem(29px);
+    line-height: rem(24px);
+    padding-left: rem(10px);
+    padding-bottom: rem(15px);
+
+    @include tablets{
+        padding-top: rem(14px);
+        padding-bottom: rem(5px);
+    }
+}
+
+.footer__bottom_content{
+    padding: rem(10px) 0;
+    margin: 0 auto;
+}
+.footer__bottom{
+    width: 100%;
+    
+}
+
+.menu__item{
+    display: inline-flex;
+}
+
+.my_contacts__link{
+    color: $blue_button;
+}
+
+.footer__part{
+    @include mobile{
+        text-align: center;
+        margin: 0 auto;
+    }
+}
+
+.footer__descr_right{
+    @include tablets{
+        text-align: center;
+    }
+}
+
+.footer__col_middle{
+    @include mobile{
+        
+        &::after{
+            content: '';
+            position: absolute;
+            width: 80%;
+            height: .1875rem;
+            background: #63666f;
+            
+            left: 50%;
+            transform: translate(-50%);
+            
+            }
+    } 
+}
