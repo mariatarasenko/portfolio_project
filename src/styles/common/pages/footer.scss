@@ -87,6 +87,7 @@
     padding: rem(20px) 0;
 }
 .descr_content_text{
+    display: inline-flex;
     padding-bottom: rem(9px);
 
     @include tablets{
@@ -123,9 +124,7 @@
     
 }
 
-.menu__item{
-    display: inline-flex;
-}
+
 
 .my_contacts__link{
     color: $blue_button;

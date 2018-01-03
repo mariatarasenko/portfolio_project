@@ -6,8 +6,9 @@ block variables
 block content
     section.section.wel_section
         .wel_container 
-            video(autoplay width="110vw" height="100vh"    object-fit="fill").video_back 
-                source(src="assets/images/common/night.mp4")
+            .video_back_block    
+                video(autoplay    object-fit="cover").video_back 
+                    source(src="assets/images/common/night.mp4")
             img(src="assets/images/common/mountains.png", alt="1").mountains_back
         
             .authorization
@@ -26,7 +27,7 @@ block content
                                 a(href="about_me.html").wel__menu_link Обо мне
                             li.wel__menu_item
                                 a(href="blog.html").wel__menu_link Блог
-                    .avto__welcome.flip__back
+                    .flip__back
                         .sign_in
                             .avto__title Авторизуйтесь
                             form.avto_form

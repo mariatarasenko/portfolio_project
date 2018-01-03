@@ -54,6 +54,7 @@
 }
 
 .articles{
+    position: fixed;
     grid-area: titles;
     padding: rem(20px) rem(25px);
     display: block;
@@ -84,12 +85,22 @@
     opacity: 0.7;
 }
 
-.blog_text.active{
+.title_text.active{
     color:$dark_blue;
     font-family: robotobold;
+
+    @include tablets{
+        color:#fff;
+        opacity: 1;
+    }
 }
-.blog_text{
+.title_text{
     color:$gray_text;
+
+    @include tablets{
+        color:#fff;
+        opacity: 0.87;
+    }
 }
 .blog_text_white{
     color: #fff;
@@ -97,6 +108,7 @@
 
 .article_content{
     padding: rem(10px) 0;
+    color:$gray_text;
 }
 .articles__item{
     padding-top:rem(10px);
@@ -114,4 +126,56 @@
 .triangle_blog{
     position:absolute;
     bottom:50%;
+}
+.mobile_articles.active{
+    margin-left: 0;
+    transition:  margin-left 1.5s;
+}
+.mobile_articles{
+    
+width: 320px;
+height: 100%;
+min-height: 2019px;
+background-color: rgba(#253468, 1);
+position:absolute;
+top: 0;
+bottom: 0;
+left: 0;
+margin-left: -340px;
+
+
+@include mobile{
+    min-height: 2340px;
+}
+}
+
+.articles__list{
+    @include tablets{
+        margin-top: 40vh;
+        position: fixed;
+        width: 320px;
+        padding: 0 10px;
+    }
+}
+.mobile_articles_button.active{
+    position: fixed;
+            top: 50%;
+            left: 297px;
+            background-color: rgba(#253468, 1);
+}
+.mobile_articles_button{
+    
+        @include tablets{
+            display: block;
+            content: "";
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: rgba(#253468, 0.87);
+            position: fixed;
+            top: 50%;
+            left: -23px;
+            cursor: pointer; 
+        }
+    
 }

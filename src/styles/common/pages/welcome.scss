@@ -48,7 +48,7 @@
     position: absolute;
     top: calc(50% - 200px);
     left: calc(50% - 225px);
-    perspective: 600px;
+    perspective: 1000px;
     
 }
 
@@ -109,7 +109,7 @@ align-items: flex-end;
     height: 100%;
     transform: rotateY(0);
     transform-style: preserve-3d;
-    transition: 1000ms;
+    transition:1000ms;
     display: flex;
    
 }
@@ -145,10 +145,8 @@ background-color:rgba($gray_footer_lighter, 0.5);
 .video_back{
     min-width: 100%;
     min-height:100% ;
+    margin-left: rem(-10px);
 
-    &::-webkit-media-controls-panel {
-        border: none;
-    }
 }
 
 .mountains_back{

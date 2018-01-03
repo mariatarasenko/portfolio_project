@@ -5,7 +5,8 @@ block variables
 
 block content 
     section.top_section.blog__top
-        include ../common/header_top.pug 
+        include ../common/header_top.pug
+         
         .user__top
             svg.svg_white_transp.svg_blog_top
                 use(xlink:href="assets/svg/sprite.svg#stars1")
@@ -25,17 +26,14 @@ block content
         //- .top_icon    
         //-     svg.bg_icon.svg_white_bg
         //-         use(xlink:href="assets/svg/sprite.svg#bg")
-
+        .mobile_articles
+            include ../common/blog_menu.pug
+            .mobile_articles_button
         aside.articles
-            ul.articles__list 
-                li.articles__item
-                    a(href="#").blog_text.active Самое важное в SASS
-                li.articles__item.blog_text
-                    a(href="#").blog_text Приёмы в вёрстке, без которых не обходится ни один сайт 
-                li.articles__item.blog_text
-                    a(href="#").blog_text Самый необходимый набор Gulp плагинов
-                li.articles__item.blog_text
-                    a(href="#").blog_text Почему я выбрал Jade
+            include ../common/blog_menu.pug
+            
+            
+            
         
         ul.articles__content 
             li.articles__content_item
