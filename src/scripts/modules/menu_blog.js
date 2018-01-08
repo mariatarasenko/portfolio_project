@@ -1,5 +1,5 @@
 module.exports = function(){
-    const blog = (function(){
+    var blog = (function(){
         const blogBtn =document.querySelector('.mobile_articles_button');
         const blogMenu =document.querySelector('.mobile_articles');
          

@@ -1,7 +1,7 @@
 
 
     module.exports = function(){
-        const sliderOn =(function(){
+        var sliderOn =(function(){
             const slides = [
                 {
                     subtitle: "Сайт школы онлайн образования",

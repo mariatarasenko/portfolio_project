@@ -17,5 +17,7 @@ if (document.getElementsByClassName('hamburger').length > 0)
 if (document.getElementsByClassName('mobile_articles_button').length > 0)
  {menuBlog(); }
 
- if (document.getElementsByClassName('.slider').length > 0)
+ if (document.getElementsByClassName('slider_section').length > 0)
 { slider(); }
+
+
