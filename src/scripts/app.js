@@ -1,7 +1,7 @@
 
 const flip = require('./modules/flip');
 const mainMenu = require('./modules/main_menu');
-const googleMap = require('./modules/map');
+const initMap = require('./modules/map');
 const menuBlog = require('./modules/menu_blog');
 const slider = require('./modules/slider');
 
