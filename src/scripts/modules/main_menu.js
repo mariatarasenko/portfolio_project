@@ -17,6 +17,8 @@ module.exports = function(){
           that.removeClass("is-closed").addClass("is-open");      
         }    
       });
+   
     })();
-        }
+        
+}
     

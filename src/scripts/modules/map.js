@@ -302,5 +302,6 @@ module.exports = function(){
           });
     
         };
-    
+        
+        window.initMap();
     }
