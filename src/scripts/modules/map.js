@@ -1,5 +1,5 @@
 module.exports = function(){
-    window.initMap = function () {
+   var initMap = function () {
         var mapEl = document.getElementById('map');
         var image = '../svg/sprite.svg#map_marker';
         var style =[
@@ -303,5 +303,5 @@ module.exports = function(){
     
         };
         
-        window.initMap();
+        initMap();
     }

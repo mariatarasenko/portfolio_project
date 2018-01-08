@@ -109,7 +109,7 @@
     padding-left: rem(10px);
     padding-bottom: rem(15px);
 
-    @include tablets{
+    @include big_tablets{
         padding-top: rem(14px);
         padding-bottom: rem(5px);
     }
@@ -124,7 +124,9 @@
     
 }
 
-
+.my_contacts{
+    padding-bottom: rem(20px);
+}
 
 .my_contacts__link{
     color: $blue_button;
