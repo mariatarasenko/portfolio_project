@@ -1,140 +1,21 @@
 
-const float = (function(){
-    const authoBtn = document.querySelectorAll('.authorisation');
-    const flipBox = document.querySelector('.welcome__flip');
-    if(!authoBtn){console.log ('element is not here');} 
-        else {
-            authoBtn.forEach(btn => {
-                btn.addEventListener('click',()=>{
-                    flipBox.classList.toggle('flip');
-            },false);
-        });
-        };
-});
+const flip = require('./modules/flip');
+const mainMenu = require('./modules/main_menu');
+const googleMap = require('./modules/map');
+const menuBlog = require('./modules/menu_blog');
+const slider = require('./modules/slider');
+
         
-        float();
-    
+  
+   
+if (document.getElementsByClassName('authorisation').length > 0)
+{ flip(); }
 
-const blog = (function(){
-    const blogBtn =document.querySelector('.mobile_articles_button');
-    const blogMenu =document.querySelector('.mobile_articles');
-    if(!blogBtn){console.log ('element is not here');} 
-    else {
-        blogBtn.addEventListener('click',()=>{
-            blogBtn.classList.toggle('opened');
-            blogMenu.classList.toggle('opened');
-    },false);
-};
-    });
+if (document.getElementsByClassName('hamburger').length > 0)
+ { mainMenu(); }
 
-    blog();
+if (document.getElementsByClassName('mobile_articles_button').length > 0)
+ {menuBlog(); }
 
-const sliderOn =(function(){
-    const slides = [
-        {
-            subtitle: "Сайт школы онлайн образования",
-            techs: "Pug, SCSS, Javascript",
-            link: "#",
-           //img: "assets/images/works/works_school.png",
-            img: "https://farm4.staticflickr.com/3685/13217706484_5ba0153343.jpg",
-            active: "active",
-        }, 
-        {
-            subtitle: "Корпоративный сайт школы йоги",
-            techs: "HTML, CSS, JavaScript",
-            link: "#",
-            //img: "assets/images/works/works_yoga.jpg",
-           img: "https://www.archbalt.org/wp-content/uploads/2017/08/pexels-photo-360912-600x400.jpg",
-            
-            active: "",
-        }, 
-        {
-            subtitle: "Сайт бизнес центра",
-            techs: "HTML, CSS, Jquery, Javascript",
-            link: "#",
-            //img: "assets/images/works/works_bus.jpg",
-           img: "http://cdn-image.travelandleisure.com/sites/default/files/1508856604/pacific-northwest-usa-northern-lights-SEATTLEAURORA1017.jpg",
-            
-            active: "",
-        }
-    ];
-
-    const  slider      = document.querySelector('.slider'),
-           openedSlide = document.querySelector('.slider__show_img'), 
-           nextSlide   = document.querySelector('.slider__img_down'),
-           prevSlide   = document.querySelector('.slider__img_up'),
-           nextBtn     = document.querySelector('.slider__btns_down'),
-           prevBtn     = document.querySelector('.slider__btns_up'),
-           subtitle    = document.querySelector('.works__list_title'),
-           techs       = document.querySelector('.works__list_techn'),
-           link        = document.querySelector('.works__button');
-    var    currentSlide = 0,
-           slidesLength = slides.length;
-
-    function slideLimiter(eq) {
-        if(eq >= slidesLength) {
-                return 0;
-        } else if(eq < 0) {
-                return slidesLength - 1;
-        } else {
-                return eq;
-               }
-        }
-
-        function fillSlider() {
-            const prev = slideLimiter(currentSlide - 1),
-                  next = slideLimiter(currentSlide + 1);
-    
-            openedSlide.setAttribute('src', slides[currentSlide].img);
-            subtitle.innerText = slides[currentSlide].subtitle;
-            techs.innerText = slides[currentSlide].techs;
-            link.setAttribute('href', slides[currentSlide].link);
-            prevSlide.setAttribute('src', slides[prev].img);
-            nextSlide.setAttribute('src', slides[next].img);
-        }
-    
-            fillSlider();
-        if(!nextBtn){console.log ('element is not here');}
-        else{
-            nextBtn.addEventListener('click', function(e){
-                currentSlide = slideLimiter(currentSlide + 1);
-                fillSlider();
-                
-            });
-        }
-
-        if(!prevBtn){console.log ('element is not here');}
-        else{
-            prevBtn.addEventListener('click', function(e){
-                currentSlide = slideLimiter(currentSlide - 1);
-                fillSlider();
-            });
-        }
-
-
-});
-
-sliderOn();
-
-
-$(document).ready(function() {
-// opened burger-menu
-$('.hamburger').on('click', (e) => {
-    e.preventDefault();
-    $('.nav__menu_hidden').toggleClass('open');
-    $('.hamburger').css({
-        'z-index': 201
-    });
-    
-});
-$(".hamburger").on("click", function() {
-    const that = $(this);    
-    if (that.hasClass("is-open")) {
-      that.removeClass("is-open").addClass("is-closed");      
-    } else {
-      that.removeClass("is-closed").addClass("is-open");      
-    }    
-  });
-})();
-
-
+ if (document.querySelector('.slider').length > 0)
+{ slider(); }
