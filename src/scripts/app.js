@@ -6,6 +6,10 @@ const menuBlog = require('./modules/menu_blog');
 const slider = require('./modules/slider');
 const formBlur = require('./modules/blur');
 const preloader = require('./modules/preloader');
+const blogNav = require('./modules/blog_nav');
+
+if (document.getElementsByClassName('title_text').length > 0)
+{ blogNav(); }
 
 if (document.getElementsByClassName('authorisation').length > 0)
 { flip(); }
@@ -19,10 +23,8 @@ if (document.getElementsByClassName('mobile_articles_button').length > 0)
  if (document.getElementsByClassName('slider_section').length > 0)
 { slider(); }
 
-if (document.images.length > 0) {
-    preloader();
-    
-}
+if (document.images.length > 0) 
+{ preloader(); }
 
 // if (document.getElementsByClassName('form_block').length > 0){
 //     window.onresize = function () {
@@ -30,6 +32,5 @@ if (document.images.length > 0) {
 //     };
 // }
 
-initMap();
-
+ initMap(); 
 
