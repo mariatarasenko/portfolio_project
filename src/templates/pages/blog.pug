@@ -5,16 +5,22 @@ block variables
 
 block content 
     section.top_section.blog__top
-        include ../common/header_top.pug
-         
-        .user__top
-            svg.svg_white_transp.svg_blog_top
-                use(xlink:href="assets/svg/sprite.svg#stars1")
-            .blog__title_content
-                .user__circle.user__pic
-                    img(src="assets/images/common/user.jpg", alt="user").user__circle_img   
-                .main_title.blog__title Блог
-                p.blog__title_desc.blog_text_white Статьи , которые я написала
+        .wel_container.blog_container 
+            .video_back_blog    
+                video(autoplay    object-fit="cover").video_back 
+                    source(src="assets/images/common/night.mp4")
+            img(src="assets/images/common/mountains.png", alt="1").mountains_back_blog
+            include ../common/header_top.pug
+            
+            .user_blog    
+                .user__top
+                    svg.svg_white_transp.svg_blog_top
+                        use(xlink:href="assets/svg/sprite.svg#stars1")
+                    .blog__title_content
+                        .user__circle.user__pic
+                            img(src="assets/images/common/user.jpg", alt="user").user__circle_img   
+                        .main_title.blog__title Блог
+                        p.blog__title_desc.blog_text_white Статьи , которые я написала
     section.blog__triangle_section
         .top_icon  
             svg.triangle_blog.about__triangle_left.svg_white_bg(viewBox="0 0 1000 100" preservaspectratio="none")

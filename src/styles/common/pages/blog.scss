@@ -30,7 +30,9 @@
 }
 
 .header__menu_blog{
-    grid-area: burger;
+    position: absolute;
+    right: rem(20px);
+    top: rem(15px);
 }
 
 .blog__content{
@@ -185,4 +187,44 @@ transition:  margin-left 1.5s;
             transition: left 1.5s;
         }
     
+}
+
+.blog__title_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.video_back_blog{
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.mountains_back_blog{
+    width: 100%;
+    position: absolute;
+    bottom: -20%;
+
+    @include tablets{
+        bottom: 0;  
+    }
+
+    @include mobile{
+       // bottom: -5%;
+    }
+}
+
+.blog_container{
+    overflow: hidden;
+}
+
+.user_blog {
+    position: absolute;
+    top:-10%;
+    left: 40%;
+   
+
 }

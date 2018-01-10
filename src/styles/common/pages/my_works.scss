@@ -13,6 +13,8 @@
 
 .header__socials{
     grid-area: icons;
+    z-index: 10;
+    position: absolute;
 }
 
 .header__menu{
@@ -27,11 +29,15 @@
 .works__user{
     grid-area: user;
     position: relative;
+    top:10%;
 }
 
 .header__scroll{
     grid-area: scroll;
-   z-index: 10;
+   z-index: 5;
+   position: absolute;
+   left: 49%;
+   bottom: 10%;
     display: flex;
     justify-content: center;
     align-items: flex-end;

@@ -8,11 +8,16 @@ block variables
 block content
     
     section.works_section.section.top_section#works_section
-        include ../common/header.pug
-        .header__scroll
-            a(href="#slider_section")
-                svg.svg_white.arrow_down.icon
-                    use(xlink:href="assets/svg/sprite.svg#arrow_down") 
+        .wel_container 
+            .video_back_block    
+                video(autoplay    object-fit="cover").video_back 
+                    source(src="assets/images/common/night.mp4")
+            img(src="assets/images/common/mountains.png", alt="1").mountains_back
+            include ../common/header.pug
+            .header__scroll
+                a(href="#slider_section")
+                    svg.svg_white.arrow_down.icon
+                        use(xlink:href="assets/svg/sprite.svg#arrow_down") 
         .slider__title_bg
             svg.triangle_works.about__triangle_left.svg_dark(viewBox="0 0 1000 100" preservaspectratio="none")
                 polygon(points="0,0 0,100 500,100")
