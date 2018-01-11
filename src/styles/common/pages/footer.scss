@@ -14,6 +14,7 @@
   
     @include tablets{
         flex-direction: column;
+        padding: 0 10px;
     }
 }
 .footer__part{
@@ -34,6 +35,10 @@
             
             }
     }
+
+    @include mobile{
+        width: 80%;
+    }
 }
 .footer__part_left{
     display: flex;
@@ -49,10 +54,10 @@
 .my_contacts{
     display: inline-flex;
     width: 100%;
-    padding-left: rem(9px);
+    //padding-left: rem(9px);
 
     @include mobile{
-        padding-left: 35%;
+        padding-left: 25%;
         padding-bottom: rem(10px);
     }
 }
@@ -75,7 +80,7 @@
 
 .menu__link{
     color: #fff;
-    padding: 0 rem(9px);
+    padding: 0 rem(9px) 0 0;
 
     @include mobile{
         padding: 0 ;
@@ -160,4 +165,21 @@
             
             }
     } 
+}
+
+.footer__descr_contacts{
+    @include tablets{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    @include mobile{
+        align-items: center;
+    }
+    
+}
+
+.menu__item_footer{
+    padding-bottom: 1rem;
 }

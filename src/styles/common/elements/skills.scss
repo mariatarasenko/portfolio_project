@@ -32,8 +32,16 @@
     width: rem(120px);
     height:rem(120px);
     margin-right: rem(40px);
+
+    @include mobile {
+      margin-top: rem(20px);
+    } 
     &:nth-last-child(1) {
       margin: 0;
+
+      @include mobile {
+        margin-right: rem(40px);
+      }
     }
   }
   
@@ -48,6 +56,7 @@
     color: $blue_button;
     
   }
+
   // .skills__circle .circle__front{
   //   stroke-dasharray: 1200;
   //   stroke-dashoffset: 1200;

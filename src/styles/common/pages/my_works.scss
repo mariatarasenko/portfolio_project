@@ -1,7 +1,7 @@
 .works_section{
     width: 100%;
     display: grid;
-    position: relative;
+    //position: relative;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 1fr 4fr 2fr; //1fr 
     grid-template-areas: "icons top burger "
@@ -16,6 +16,7 @@
     grid-area: icons;
     z-index: 10;
     position: absolute;
+    margin-left: 5%;
 }
 
 .header__menu{
@@ -28,9 +29,16 @@
 }
 
 .works__user{
-    grid-area: user;
-    position: relative;
-    top:10%;
+    // grid-area: user;
+    // position: relative;
+    position: absolute;
+    left: 0;
+    top: 15%;
+    width: 100%;
+
+    @include mobile{
+        top: 25%;
+    }
 }
 
 .header__scroll{
@@ -38,18 +46,18 @@
    z-index: 5;
    position: absolute;
    left: 49%;
-   bottom: 10%;
+   bottom: 5%;
     display: flex;
     justify-content: center;
     align-items: flex-end;
 }
 .header__user{
    
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
+    // position: absolute;
+    // top: 0;
+    // right: 0;
+    // left: 0;
+    // bottom: 0;
     
 }
 .slider__title_bg{
@@ -81,6 +89,9 @@
     top:20%;
 }
 .slider_section{
+    min-height: 100vh;
+    display: flex;
+    //height: 100%;
 }
 
 .slider__item_layout{
@@ -188,7 +199,7 @@
 }
 
 .btn_img{
-    max-height:rem(230px);
+   // max-height:rem(230px);
     width: 100%;
     height: 100%;
     

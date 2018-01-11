@@ -61,6 +61,7 @@
 .wel__menu{
     display: flex;
     justify-content: space-around;
+    padding-top: rem(20px);
    
 }
 
@@ -128,9 +129,14 @@ align-items: flex-end;
     left: 0;
 
     width: 450px;
-    height: 400px;
+   // height: 400px;
     backface-visibility: hidden;
     background-color:rgba($gray_footer_lighter, 0.5);
+
+    @include mobile{
+        left: 20%;
+        width: 60%;
+    }
 
 }
 
@@ -139,11 +145,16 @@ align-items: flex-end;
     top: 0;
     left: 0;
 width: 450px;
-height: 400px;
+//height: 400px;
 backface-visibility: hidden;
 transform-style: preserve-3d;
 transform: rotateY(180deg);
 background-color:rgba($gray_footer_lighter, 0.5);
+
+@include mobile{
+    left: 20%;
+    width: 60%;
+}
 }
 
 .video_back{
@@ -166,6 +177,10 @@ background-color:rgba($gray_footer_lighter, 0.5);
     width: 100%;
     position: absolute;
     bottom: -10%;
+
+    @include mobile{
+        bottom: -1%;
+    }
 }
 
 

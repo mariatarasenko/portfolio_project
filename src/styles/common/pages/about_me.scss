@@ -30,7 +30,7 @@
 .about__left {
     background-color: $about_me;
     @include tablets{
-    padding-left: 10%;
+    //padding-left: 10%;
     }
     
 }
@@ -112,12 +112,23 @@ justify-content:center ;
     z-index: 10;
     background-color: rgba(255, 255, 255, 0.7);
     position: absolute;
-    top: 25%;
-    left: 25% ;
+    margin-top: 20%;
+    // top: 25%;
+     left: 25% ;
 
     @include tablets{
         left: 20% ; 
-        min-height: 27%; 
+        min-height: 46%; 
+    }
+
+    @include mobile{
+     width: 100vw;
+    height: 22.3125rem;
+    min-height: 22.3125rem; 
+    background-color: rgba(255, 255, 255, 0.8);
+    left: 0 ; 
+    margin-top:0;
+    max-width: 100%;
     }
     
     

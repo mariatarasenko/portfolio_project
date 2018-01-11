@@ -13,11 +13,11 @@ block content
                 video(autoplay    object-fit="cover").video_back 
                     source(src="assets/images/common/night.mp4")
             img(src="assets/images/common/mountains.png", alt="1").mountains_back
-            include ../common/header.pug
-            .header__scroll
-                a(href="#slider_section")
-                    svg.svg_white.arrow_down.icon
-                        use(xlink:href="assets/svg/sprite.svg#arrow_down") 
+        include ../common/header.pug
+        .header__scroll
+            a(href="#slider_section")
+                svg.svg_white.arrow_down.icon
+                    use(xlink:href="assets/svg/sprite.svg#arrow_down") 
         .slider__title_bg
             svg.triangle_works.about__triangle_left.svg_dark(viewBox="0 0 1000 100" preservaspectratio="none")
                 polygon(points="0,0 0,100 500,100")
@@ -30,7 +30,7 @@ block content
                 //- svg.my_works__icon.svg_white_transp.stars_img
                 //-     use(xlink:href="assets/svg/sprite.svg#stars4") 
                 .works__title.main_title Мои работы   
-    section.slider_section.section#slider_section 
+    section.slider_section#slider_section 
         
         .slider
             .slider__item_layout    

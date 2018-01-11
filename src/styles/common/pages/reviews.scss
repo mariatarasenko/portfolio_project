@@ -38,6 +38,10 @@
     width: rem(350px);
     line-height: rem(66px);
     text-align: center;
+
+    @include mobile{
+        left: 0; 
+    }
 }
 
 .reviews__items{
