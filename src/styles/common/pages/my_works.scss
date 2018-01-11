@@ -3,11 +3,12 @@
     display: grid;
     position: relative;
     grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 1fr 4fr 2fr 1fr;
+    grid-template-rows: 1fr 4fr 2fr; //1fr 
     grid-template-areas: "icons top burger "
                          "left user right"
-                         "left scroll right"
-                         "bot_part bot_part bot_part";
+                         "left scroll right";
+                        //  "bot_part bot_part bot_part"
+                        
 
 }
 

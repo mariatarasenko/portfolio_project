@@ -1,6 +1,8 @@
 module.exports = function () {
     $(window).scroll(function(){
         var topScroll = $(this).scrollTop();
+
+        console.log( topScroll);
         
         if(topScroll > $('#article_first').offset().top - 100) {
             $('.title_text').parent().children().removeClass('active');
