@@ -6,24 +6,34 @@
     
     display: flex;
     flex-direction: column;
-    
-    // display: grid;
-    // grid-template-columns: 1fr 2fr 1fr;
-    // grid-template-rows: 1fr 2fr 1fr;
-    // grid-template-areas: "left top avto "
-    //                      "left welcome right"
-    //                      "left footer right";
+ }
 
-}
-
-.authorization{
+.authorisation_block{
  
  position: absolute;
  top: 0;
  right: 0;
- 
+ display: block;
+    opacity: 1;
+    transition: opacity 1s ;
 
-}
+ }
+ .authorisation_block.hidden{
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ;
+ }
+ .authorisation{
+    display: block;
+    opacity: 1;
+    transition: opacity 1s ;
+ }
+
+ .authorisation.hidden{
+     display: none;
+     opacity: 0;
+     transition: opacity 1s ;
+ }
 
 .button_auto{
     margin-right:rem(100px);
@@ -46,7 +56,6 @@
 
 
 .welcome__content{
-    // grid-area: welcome;
     width: 450px;
     height: 400px;
     position: absolute;
@@ -129,7 +138,6 @@ align-items: flex-end;
     left: 0;
 
     width: 450px;
-   // height: 400px;
     backface-visibility: hidden;
     background-color:rgba($gray_footer_lighter, 0.5);
 
@@ -145,7 +153,6 @@ align-items: flex-end;
     top: 0;
     left: 0;
 width: 450px;
-//height: 400px;
 backface-visibility: hidden;
 transform-style: preserve-3d;
 transform: rotateY(180deg);
@@ -169,8 +176,6 @@ background-color:rgba($gray_footer_lighter, 0.5);
     position: absolute;
     top: 0;
     left: 0;
-   // height: 100%;
-    //overflow: hidden;
 }
 
 .mountains_back{

@@ -11,7 +11,7 @@ block content
                     source(src="assets/images/common/night.mp4")
             img(src="assets/images/common/mountains.png", alt="1").mountains_back_wel
         
-            .authorization
+            .authorisation_block
                 button(type="submit").button.button_transp.button_auto.authorisation
                     span.button__text Авторизироваться 
             
@@ -50,7 +50,7 @@ block content
                                             input#robot__check.robot__check(type="checkbox" name="robot-check")
                                             label.check__label(for="robot__check") Я человек
                                                 svg.check__label_icon
-                                                    use(xlink:href="./images/sprite/mySprite.min.svg#check")
+                                                    use(xlink:href="assets/svg/sprite.svg#check")
                                         .signin__radio
                                             .robot__quest Вы точно не робот?
                                             .robot__radio
@@ -60,20 +60,13 @@ block content
                                                 input#not-sure.robot__radio_tag(name="anwsr" type="radio")
                                                 label.radio__label(for="not-sure") Не уверен
                             .avto__links
-                                .avto__link.wel__menu_item
-                                    a.avto__link_one(href="main.html")
+                                .avto__link.wel__menu_item.avto__link_main
+                                    a.avto__link_one(href="#")
                                     .avto__link_descr На главную
                                 .avto__link.wel__menu_item
-                                    a.avto__link_one(href="main.html")
+                                    a.avto__link_one(href="index.html")
                                     .avto__link_descr Войти
             .welcome__footer
                 .welcome__descr
                     p.descr_content © Мария Тарасенко | создано с любовью в LoftSchool | 2017
             
-
-                
-        
-    
-     
-
-    

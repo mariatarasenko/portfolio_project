@@ -3,10 +3,6 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-
-    @include tablets{
-       //min-height: 23%;
-    } 
     
 }
 .footer_row{
@@ -17,9 +13,7 @@
         padding: 0 10px;
     }
 }
-.footer__part{
-    
-}
+
 .footer__part_right{
     flex:1;
 
@@ -54,7 +48,6 @@
 .my_contacts{
     display: inline-flex;
     width: 100%;
-    //padding-left: rem(9px);
 
     @include mobile{
         padding-left: 25%;

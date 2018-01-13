@@ -11,16 +11,10 @@ module.exports = function(){
         window.addEventListener('scroll',function () {
             let wScroll = window.pageYOffset;
             moveLayers(bg,wScroll,45);
-            moveLayers(user,wScroll,15)
-            //console.log(style.transform);
+            moveLayers(user,wScroll,15);
         });
     } 
-       //var wScroll = window.pageYOffset;
        parallaxScrollInit(); 
     }());
-    //window.onscroll = function(){
-      // var wScroll = window.pageYOffset;
-      //  console.log(wScroll);
-      //  parallax.init(wScroll);
-    //};
+    
 }

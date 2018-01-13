@@ -7,7 +7,6 @@
                     subtitle: "Сайт школы онлайн образования",
                     techs: "Pug, SCSS, Javascript",
                     link: "#",
-                   //img: "assets/images/works/works_school.png",
                     img: "https://farm4.staticflickr.com/3685/13217706484_5ba0153343.jpg",
                     active: "active",
                 }, 
@@ -15,7 +14,6 @@
                     subtitle: "Корпоративный сайт школы йоги",
                     techs: "HTML, CSS, JavaScript",
                     link: "#",
-                    //img: "assets/images/works/works_yoga.jpg",
                    img: "https://www.archbalt.org/wp-content/uploads/2017/08/pexels-photo-360912-600x400.jpg",
                     
                     active: "",
@@ -24,7 +22,6 @@
                     subtitle: "Сайт бизнес центра",
                     techs: "HTML, CSS, Jquery, Javascript",
                     link: "#",
-                    //img: "assets/images/works/works_bus.jpg",
                    img: "http://cdn-image.travelandleisure.com/sites/default/files/1508856604/pacific-northwest-usa-northern-lights-SEATTLEAURORA1017.jpg",
                     
                     active: "",

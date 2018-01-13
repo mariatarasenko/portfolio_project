@@ -10,9 +10,6 @@ const blogNav = require('./modules/blog_nav');
 const parallaxMountains = require('./modules/parallax');
 const svgAnimate = require('./modules/svg_scroll');
 
-// if (document.getElementsByClassName('.skills__circles').length > 0)
-//{   
-    //svgAnimate(); }
  
 
 if (document.getElementsByClassName('mountains_back').length > 0)
@@ -39,11 +36,6 @@ if (document.getElementsByClassName('mobile_articles_button').length > 0)
 if (document.images.length > 0) 
 { preloader(); }
 
-// if (document.getElementsByClassName('form_block').length > 0){
-//     window.onresize = function () {
-//         formBlur();
-//     };
-// }
 
  initMap(); 
 

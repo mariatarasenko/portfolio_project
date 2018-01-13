@@ -29,13 +29,11 @@ block content
                 polygon(points="500,100 1000,0 1000,100")
     section.blog__content
         
-        //- .top_icon    
-        //-     svg.bg_icon.svg_white_bg
-        //-         use(xlink:href="assets/svg/sprite.svg#bg")
+      
         .mobile_articles
             include ../common/blog_menu.pug
             .mobile_articles_button
-        aside.articles
+        aside.articles.absolute
             include ../common/blog_menu.pug
             
             
@@ -65,3 +63,4 @@ block content
                 p.article_content.blog_text Еще один большой плюс в пользу Jade - это наследование шаблонов! Это просто супер (простите за слэнг, но это так). Чтобы это понять, посмотрите папку views, из предыдущего поста. У нас в ней два файла - это layout - базовый шаблон в котором описана вся структуру и файл index, которой наследуется от layout (extends layout) и переопределяет блок контента. Вы только представьте сколько времени вы экономите при создание сайта.
         
     include ../common/footer.pug   
+    

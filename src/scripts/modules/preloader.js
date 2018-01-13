@@ -18,7 +18,6 @@ module.exports = function(){
         function imgLoaded() {
             document.body.style.overflow='hidden';
             imagesLoadCount++;
-            //console.log(imagesLoadCount);
             imagesLoadPerc.innerHTML =  Math.ceil((100 / imagesTotalCount) * imagesLoadCount);;
             
             if(imagesLoadCount >= imagesTotalCount){
@@ -32,9 +31,6 @@ module.exports = function(){
             }
         }
 
-    
-
-            //imgLoaded();
         
 
     };

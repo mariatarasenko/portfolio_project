@@ -8,15 +8,12 @@
 }
 
 .about__left_title{
-    color:$black_title;
-   // text-align: center;
-    
+    color:$black_title; 
     
 }
 
 .about__titles{
     padding-bottom: rem(40px);
-   // padding-right: 10%;
     text-align: center; 
 
     @include tablets{
@@ -30,7 +27,6 @@
 .about__left {
     background-color: $about_me;
     @include tablets{
-    //padding-left: 10%;
     }
     
 }
@@ -43,10 +39,7 @@
     @include tablets{
         flex-direction: column;
         height: auto;
-     
-        
- }
-    
+    }
 }
 
 .info__photo{
@@ -57,8 +50,6 @@
 
 .info__photo_jpg{
     width: 100%;
-    //height: 70%;
- 
     }
 
 .about__right_title{
@@ -93,7 +84,6 @@ justify-content:center ;
 
 .about__part_container  {
    padding: 0 40px;
-    //padding-left: rem(40px);
 }
 
 
@@ -113,7 +103,6 @@ justify-content:center ;
     background-color: rgba(255, 255, 255, 0.7);
     position: absolute;
     margin-top: 20%;
-    // top: 25%;
      left: 25% ;
 
     @include tablets{
@@ -181,12 +170,3 @@ justify-content:center ;
 .contacts__title{
     padding: rem(40px) 0;
 }
-.about__right{
-    //margin-left:rem(50px);
-}
-
-// .mountains_back_about{
-//     width: 100%;
-//     position: absolute;
-//     bottom: 0;
-// }

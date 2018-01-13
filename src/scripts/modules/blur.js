@@ -8,13 +8,10 @@ module.exports = function () {
                 var bgWidth = document.querySelector('.form_image').offsetWidth,
                     bgHeight = document.querySelector('.form_image').offsetHeight,
                     posTop = -formWrap.offsetTop,
-                    blurCSS = form.style,
+                    //blurCSS = form.style,
                     wrapHeight = formWrap.offsetHeight;
                     transformY = posTop-wrapHeight/2;
                     positionY =  blurCSS.background-position-y;
-                    //positionX = blurCSS.background-position-x;
-                    console.log( positionY);
-                    //positionY  =  transformY + 'px)';
             }
         }
     })();
