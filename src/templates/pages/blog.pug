@@ -5,15 +5,22 @@ block variables
 
 block content 
     section.top_section.blog__top
-        include ../common/header_top.pug 
-        .user__top
-            svg.svg_white_transp.svg_blog_top
-                use(xlink:href="assets/svg/sprite.svg#stars1")
-            .blog__title_content
-                .user__circle.user__pic
-                    img(src="assets/images/common/user.jpg", alt="user").user__circle_img   
-                .main_title.blog__title Блог
-                p.blog__title_desc.blog_text_white Статьи , которые я написала
+        .blog_container 
+            .video_back_blog    
+                video(autoplay    object-fit="cover").video_back 
+                    source(src="assets/images/common/night.mp4")
+            img(src="assets/images/common/mountains.png", alt="1").mountains_back
+            include ../common/header_top.pug
+            
+            .user_blog    
+                .user__top
+                    svg.svg_white_transp.svg_blog_top
+                        use(xlink:href="assets/svg/sprite.svg#stars1")
+                    .blog__title_content
+                        .user__circle.user__pic
+                            img(src="assets/images/common/user.jpg", alt="user").user__circle_img   
+                        .main_title.blog__title Блог
+                        p.blog__title_desc.blog_text_white Статьи , которые я написала
     section.blog__triangle_section
         .top_icon  
             svg.triangle_blog.about__triangle_left.svg_white_bg(viewBox="0 0 1000 100" preservaspectratio="none")
@@ -22,42 +29,38 @@ block content
                 polygon(points="500,100 1000,0 1000,100")
     section.blog__content
         
-        //- .top_icon    
-        //-     svg.bg_icon.svg_white_bg
-        //-         use(xlink:href="assets/svg/sprite.svg#bg")
-
-        aside.articles
-            ul.articles__list 
-                li.articles__item
-                    a(href="#").blog_text.active Самое важное в SASS
-                li.articles__item.blog_text
-                    a(href="#").blog_text Приёмы в вёрстке, без которых не обходится ни один сайт 
-                li.articles__item.blog_text
-                    a(href="#").blog_text Самый необходимый набор Gulp плагинов
-                li.articles__item.blog_text
-                    a(href="#").blog_text Почему я выбрал Jade
+      
+        .mobile_articles
+            include ../common/blog_menu.pug
+            .mobile_articles_button
+        aside.articles.absolute
+            include ../common/blog_menu.pug
+            
+            
+            
         
         ul.articles__content 
-            li.articles__content_item
+            li.articles__content_item#article_first
                 .article_title Самое важное в SASS
                 .article_date 22 ноября 2016
                 p.article_content.blog_text  Tаким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия.Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. 
                 p.article_content.blog_text Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.
                 img(src="assets/images/works/snippet.jpg", alt="232").article_photo     
-            li.articles__content_item
+            li.articles__content_item#article_second
                 .article_title Приёмы в вёрстке, без которых не обходится ни один сайт 
                 .article_date 13 ноября 2016
                 p.article_content.blog_text  Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. 
                 p.article_content.blog_text  Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия.Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.
-            li.articles__content_item
+            li.articles__content_item#article_third
                 .article_title Самый необходимый набор Gulp плагинов
                 .article_date 20 октября 2016
                 p.article_content.blog_text  Будучи начинающим фронтенд разработчиком, очевидным важным шагом будет знакомство с инструментами, которые помогают вашим коллегам не потерять рассудок в этой действительно непростой сфере: писать более гибкий CSS код, используя Saas. Вам полагается возможность оптимизировать скорость передачи JS файлов при помощи минификации. Вы также заслужили такую роскошь, как автоматическая валидация JS, с помощью JSHint.Вы заслужили все эти замечательные вещи.
                 p.article_content.blog_text И так, вы начинаете пользоваться всеми великолепными инструментами и вам каждый раз приходится вручную запускать огромное количество инструкций в командной строке. Время от времени вы забываете запустить sass компилятор... Иногда вы забываете запустить JSHint и пропускаете очередной баг...И в один прекрасный момент вы зададитесь вопросом: есть-ли способ автоматизировать все эти инструменты? Как же настроить надёжный рабочий процесс и избежать большинства ошибок? Само собой решение существует и инструменты, которые только и ждут момента когда ваши руки доберутся до них: Webpack и Gulp. 
-            li.articles__content_item
+            li.articles__content_item#article_fourth
                 .article_title Почему я выбрал Jade
                 .article_date 12 октября 2016
                 p.article_content.blog_text Jade, изначально оттолкнул меня своим синтаксисом, это все-таки не html, просто структурированные теги. Никаких открывающихся/закрывающихся тегов - и это по началу дико, но очень быстро понимаешь, что это удобно. Ну и конечно же - это наличие хорошей документации - для любого разработчика - это очень важно.
                 p.article_content.blog_text Еще один большой плюс в пользу Jade - это наследование шаблонов! Это просто супер (простите за слэнг, но это так). Чтобы это понять, посмотрите папку views, из предыдущего поста. У нас в ней два файла - это layout - базовый шаблон в котором описана вся структуру и файл index, которой наследуется от layout (extends layout) и переопределяет блок контента. Вы только представьте сколько времени вы экономите при создание сайта.
         
     include ../common/footer.pug   
+    

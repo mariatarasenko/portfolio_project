@@ -3,10 +3,6 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-
-    @include tablets{
-       //min-height: 23%;
-    } 
     
 }
 .footer_row{
@@ -14,11 +10,10 @@
   
     @include tablets{
         flex-direction: column;
+        padding: 0 10px;
     }
 }
-.footer__part{
-    
-}
+
 .footer__part_right{
     flex:1;
 
@@ -33,6 +28,10 @@
             transform: translate(-50%);
             
             }
+    }
+
+    @include mobile{
+        width: 80%;
     }
 }
 .footer__part_left{
@@ -49,10 +48,9 @@
 .my_contacts{
     display: inline-flex;
     width: 100%;
-    padding-left: rem(9px);
 
     @include mobile{
-        padding-left: 35%;
+        padding-left: 25%;
         padding-bottom: rem(10px);
     }
 }
@@ -75,7 +73,7 @@
 
 .menu__link{
     color: #fff;
-    padding: 0 rem(9px);
+    padding: 0 rem(9px) 0 0;
 
     @include mobile{
         padding: 0 ;
@@ -87,6 +85,7 @@
     padding: rem(20px) 0;
 }
 .descr_content_text{
+    display: inline-flex;
     padding-bottom: rem(9px);
 
     @include tablets{
@@ -108,7 +107,7 @@
     padding-left: rem(10px);
     padding-bottom: rem(15px);
 
-    @include tablets{
+    @include big_tablets{
         padding-top: rem(14px);
         padding-bottom: rem(5px);
     }
@@ -123,8 +122,8 @@
     
 }
 
-.menu__item{
-    display: inline-flex;
+.my_contacts{
+    padding-bottom: rem(20px);
 }
 
 .my_contacts__link{
@@ -159,4 +158,21 @@
             
             }
     } 
+}
+
+.footer__descr_contacts{
+    @include tablets{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    @include mobile{
+        align-items: center;
+    }
+    
+}
+
+.menu__item_footer{
+    padding-bottom: 1rem;
 }

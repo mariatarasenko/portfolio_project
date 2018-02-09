@@ -10,6 +10,11 @@
 .socials{
     text-align: center;
     margin-top: rem(20px);
+
+    @include mobile{
+        margin-top: 2rem;
+        margin-left: 2rem;
+    }
 }
 
 .socials__item{

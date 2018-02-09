@@ -1,0 +1,61 @@
+.preloader {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url('../images/common/night_prel_bg.jpg') 50% 50% no-repeat;
+    background-size: cover;
+    z-index: 1000;
+    opacity: 1;
+    transition: all 0.5s;
+    visibility: visible;
+
+    
+}
+
+.preloader.done {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.preloader__pic, .preloader__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.preloader__pic{
+    width: 100px;
+    height: 100px;
+}
+
+.preloader__icon{
+    height: 100px;
+    width: 100px;
+    fill: transparent;
+    stroke: #fff;  
+    transform: rotateZ(-90deg);
+}
+
+.preloader__text{
+    font-size: 1rem;
+    line-height: 0;
+    color: #fff; 
+}
+
+.preloader__icon circle {
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    animation: spin 3s linear infinite;
+    animation-fill-mode: forwards;
+}
+
+@keyframes spin {
+    0% {
+        stroke-dashoffset: 450;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+    }
+}

@@ -38,6 +38,10 @@
     width: rem(350px);
     line-height: rem(66px);
     text-align: center;
+
+    @include mobile{
+        left: 0; 
+    }
 }
 
 .reviews__items{
@@ -79,14 +83,19 @@ background-image: url(../images/works/Dmitriy.jpg)
     
 }
 .form_image{
+    width: 100%;
+    height: 110%;
     position: absolute;
     top: 0;
     left: 0;
     background-image: url(../images/works/bg_works.png);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-    filter: blur(1px);
+    background-size: 377%;
+    background-position-y: -401px;
+    background-position-x: -268px;
+    filter: blur(2px);
+
 }
 
 .form_questions{
@@ -97,20 +106,27 @@ background-image: url(../images/works/Dmitriy.jpg)
 .form_block{
     position: relative;
     margin-left: 25%;
-    margin-top: rem(55px);
+    margin-top: rem(25px);
     grid-area:form;   
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    //background: rgba(255, 254, 254, 0.085);
     max-width: 100%; 
     width: rem(384px);
+    height: 27rem;
+
+    @include tablets{
+        margin-left: 15%; 
+    }
+
+    @include mobile{
+        margin-left: auto; 
+    }
+
   }
 
 
 .form__row{
     flex:1;
     margin-bottom: rem(25px);
+    margin-left: rem(15px);
 }
 .form__content{
     width: rem(343px);
@@ -146,12 +162,11 @@ background-image: url(../images/works/Dmitriy.jpg)
     border: none;
 }
 .form__buttons_row{
-    width: 100%;
+    width: 107%;
     display: flex;
 }
 .arrow_up{
-    padding: rem(20px) 0;
+    padding-top: rem(60px) ;
     display: flex;
     justify-content: center;
 }
-

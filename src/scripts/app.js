@@ -1,11 +1,41 @@
-(function(){
-    const authoBtn = document.querySelectorAll('.authorisation');
-    const flipBox = document.querySelector('.welcome__flip');
 
-    authoBtn.forEach(btn => {
-        btn.addEventListener('click',()=>{
-            flipBox.classList.toggle('flip');
-    },false);
-});
-})();
+const flip = require('./modules/flip');
+const mainMenu = require('./modules/main_menu');
+const initMap = require('./modules/map');
+const menuBlog = require('./modules/menu_blog');
+const slider = require('./modules/slider');
+const formBlur = require('./modules/blur');
+const preloader = require('./modules/preloader');
+const blogNav = require('./modules/blog_nav');
+const parallaxMountains = require('./modules/parallax');
+const svgAnimate = require('./modules/svg_scroll');
+
+ 
+
+if (document.getElementsByClassName('mountains_back').length > 0)
+{   
+     parallaxMountains(); }
+
+if (document.getElementsByClassName('title_text').length > 0)
+{ blogNav(); 
+    
+}
+
+if (document.getElementsByClassName('authorisation').length > 0)
+{ flip(); }
+
+if (document.getElementsByClassName('hamburger').length > 0)
+ { mainMenu(); }
+
+if (document.getElementsByClassName('mobile_articles_button').length > 0)
+ {menuBlog(); }
+
+ if (document.getElementsByClassName('slider_section').length > 0)
+{ slider(); }
+
+if (document.images.length > 0) 
+{ preloader(); }
+
+
+ initMap(); 
 

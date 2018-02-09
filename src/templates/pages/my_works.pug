@@ -8,6 +8,11 @@ block variables
 block content
     
     section.works_section.section.top_section#works_section
+        .wel_container 
+            .video_back_block    
+                video(autoplay    object-fit="cover").video_back 
+                    source(src="assets/images/common/night.mp4")
+            img(src="assets/images/common/mountains.png", alt="1").mountains_back
         include ../common/header.pug
         .header__scroll
             a(href="#slider_section")
@@ -18,77 +23,35 @@ block content
                 polygon(points="0,0 0,100 500,100")
             svg.triangle_works.about__triangle_right.svg_dark(viewBox="0 0 1000 100" preservaspectratio="none")
                 polygon(points="500,100 1000,0 1000,100")
-            //- svg.bg_icon.svg_dark.bg_icon_works
-            //-     use(xlink:href="assets/svg/sprite.svg#bg_header")
             
-            .slider__title_order.stars3_img            
-                //- svg.my_works__icon.svg_white_transp.stars_img
-                //-     use(xlink:href="assets/svg/sprite.svg#stars4") 
+            .slider__title_order.stars3_img             
                 .works__title.main_title Мои работы   
-    section.slider_section.section#slider_section 
+    section.slider_section#slider_section 
         
         .slider
-            .slider__item
+            .slider__item_layout    
+                
                 .slider__info
-                    .works__list_title
-                        .subtitle сайт бизнес центра
-                    .works__list_techn HTML, CSS, Jquery, Javascript
-                    .active__button.works__button
-                        svg.svg_white.svg_link.small_icon
-                            use(xlink:href="assets/svg/sprite.svg#link")
-                        a(href="#").works__button_link Посмотреть сайт
-                .slider_display
-                    img(src="assets/images/works/works_bus.jpg", alt="1").middle.slider__main_img
-                .slider__btns
-                    .slider__btns_one.slider__btns_down.btn_img_yoga
-                        .svg_slider.middle
-                            svg.icon.svg_white
-                                use(xlink:href="assets/svg/sprite.svg#portf_arrow_down")
-                    .slider__btns_one.slider__btns_up.btn_img_school
-                        .svg_slider.middle
-                            svg.icon.svg_white
-                                use(xlink:href="assets/svg/sprite.svg#portf_arrow_up")
-            .slider__item
-                .slider__info
-                    .works__list_title
-                        .subtitle корпоративный сайт школы йоги
-                    .works__list_techn HTML, CSS, JavaScript
-                    .active__button.works__button
-                        svg.svg_white.svg_link.small_icon
-                            use(xlink:href="assets/svg/sprite.svg#link")
-                        a(href="#").works__button_link Посмотреть сайт
-                .slider_display
-                    img(src="assets/images/works/works_yoga.jpg", alt="1").middle.slider__main_img
-                .slider__btns
-                    .slider__btns_one.slider__btns_down.btn_img_school
-                        .svg_slider.middle
-                            svg.icon.svg_white
-                                use(xlink:href="assets/svg/sprite.svg#portf_arrow_down")
-                    .slider__btns_one.slider__btns_up.btn_img_bus
-                        .svg_slider.middle
-                            svg.icon.svg_white
-                                use(xlink:href="assets/svg/sprite.svg#portf_arrow_up")
-            .slider__item.slider__item_active
-                .slider__info
-                    .works__list_title
-                        .subtitle сайт школы онлайн образования
+                    .works__list_title.subtitle сайт школы онлайн образования
                     .works__list_techn Pug, SCSS, Javascript
                     .active__button.works__button
                         svg.svg_white.svg_link.small_icon
                             use(xlink:href="assets/svg/sprite.svg#link")
                         a(href="#").works__button_link Посмотреть сайт
                 .slider_display
-                    img(src="assets/images/works/works_school.png", alt="1").middle.slider__main_img
+                    img(src="assets/images/works/works_school.png", alt="1").middle.slider__main_img.slider__show_img
                 .slider__btns
-                    .slider__btns_one.slider__btns_down.btn_img_bus
+                    .slider__btns_one.slider__btns_down
+                        img(src="assets/images/works/works_bus.jpg", alt="down").btn_img.slider__img_down
                         .svg_slider.middle
                             svg.icon.svg_white
                                 use(xlink:href="assets/svg/sprite.svg#portf_arrow_down")
-                    .slider__btns_one.slider__btns_up.btn_img_yoga
+                    .slider__btns_one.slider__btns_up
+                        img(src="assets/images/works/works_yoga.jpg", alt="up").btn_img.slider__img_up
                         .svg_slider.middle
                             svg.icon.svg_white
                                 use(xlink:href="assets/svg/sprite.svg#portf_arrow_up")
-                    
+                
     section.reviews
         .reviews__title
             svg.reviews__icon.svg_white_transp
@@ -135,6 +98,4 @@ block content
                     use(xlink:href="assets/svg/sprite.svg#portf_arrow_up")
 
         include ../common/footer.pug
-        
-        
-                
+              

@@ -8,15 +8,12 @@
 }
 
 .about__left_title{
-    color:$black_title;
-   // text-align: center;
-    
+    color:$black_title; 
     
 }
 
 .about__titles{
     padding-bottom: rem(40px);
-   // padding-right: 10%;
     text-align: center; 
 
     @include tablets{
@@ -30,7 +27,6 @@
 .about__left {
     background-color: $about_me;
     @include tablets{
-    padding-left: 10%;
     }
     
 }
@@ -43,10 +39,7 @@
     @include tablets{
         flex-direction: column;
         height: auto;
-     
-        
- }
-    
+    }
 }
 
 .info__photo{
@@ -57,7 +50,6 @@
 
 .info__photo_jpg{
     width: 100%;
- 
     }
 
 .about__right_title{
@@ -92,7 +84,6 @@ justify-content:center ;
 
 .about__part_container  {
    padding: 0 40px;
-    //padding-left: rem(40px);
 }
 
 
@@ -108,21 +99,37 @@ justify-content:center ;
     width: rem(580px);
     max-width: 60%;
     height: rem(293px);
-    
+    z-index: 10;
     background-color: rgba(255, 255, 255, 0.7);
     position: absolute;
-    top: 25%;
-    left: 25% ;
+    margin-top: 20%;
+     left: 25% ;
 
     @include tablets{
         left: 20% ; 
-        min-height: 40%; 
+        min-height: 46%; 
+    }
+
+    @include mobile{
+     width: 100vw;
+    height: 22.3125rem;
+    min-height: 22.3125rem; 
+    background-color: rgba(255, 255, 255, 0.8);
+    left: 0 ; 
+    margin-top:0;
+    max-width: 100%;
     }
     
     
 }
 #map{
-    height: 90%;
+    height: 85%;
+    @include big_tablets{
+        height: 78%;
+    }
+    @include tablets{
+        height: 80%;
+    }
 }
 
 .contacts__item{
@@ -134,9 +141,12 @@ justify-content:center ;
         padding: rem(10px) 0;
     }
 }
-
+.grey_text{
+    color:$gray_text;
+}
 .contacts__text{
     padding-left: rem(10px);
+  
 }
 
 .contacts__row{
@@ -159,7 +169,4 @@ justify-content:center ;
 
 .contacts__title{
     padding: rem(40px) 0;
-}
-.about__right{
-    //margin-left:rem(50px);
 }
