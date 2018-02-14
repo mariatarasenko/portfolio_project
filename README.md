@@ -20,5 +20,5 @@
 7. FlexBox , CSS Grids
 
 ## Link to my page (if you dont want to install this project, you can open it here )
-https://mariatarasenko.github.io/myportfoliopage/
+https://mariatarasenko.github.io/myportpage/
 
